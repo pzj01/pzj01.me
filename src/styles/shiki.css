@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Input';
+  src: url('/fonts/input.woff2') format('woff2');
+  display: swap;
+}
+
+.shiki {
+  @apply transition-colors text-sm p-2 lg:(text-base p-4) rounded-lg overflow-y-hidden overflow-x-auto;
+  font-family: 'Input' !important;
+  & span {
+    @apply transition-colors;
+  }
+}
+
+.dark {
+  .shiki {
+    &, span {
+      color: var(--shiki-dark) !important;
+      background-color: var(--shiki-dark-bg) !important;
+    }
+  }
+}

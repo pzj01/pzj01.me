@@ -1,0 +1,33 @@
+:root {
+  @apply scroll-smooth;
+}
+
+.font-chinese {
+  font-family: Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+hr {
+  @apply my-2;
+}
+
+summary {
+  @apply mb-2 font-bold;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  @apply animate-none mix-blend-normal;
+}
+
+::view-transition-old(root) {
+  @apply z-1;
+}
+::view-transition-new(root) {
+  @apply z-9999;
+}
+.dark::view-transition-old(root) {
+  @apply z-9999;
+}
+.dark::view-transition-new(root) {
+  @apply z-1;
+}

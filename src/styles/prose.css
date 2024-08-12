@@ -1,0 +1,137 @@
+/* enable css nesting */
+.prose {
+  @apply mt-4 space-y-4;
+  
+  :is(h1, h2, h3, h4, h5, h6) {
+    @apply font-bold;
+    .anchor {
+      @apply hidden lg:inline-block opacity-0 transition-opacity;
+    }
+
+    &:hover {
+      .anchor {
+        @apply opacity-100;
+      }
+    }
+  }
+
+  :is(p, blockquote, ul, ol, li, strong, em, s) {
+    @apply text-neutral-500;
+    &::selection {
+      @apply bg-black dark:(bg-white text-black) text-white;
+    }
+  }
+  
+  /* 标题 */
+  h1 {
+    @apply text-2xl lg:-ml-7;
+  }
+
+  h2 {
+    @apply text-xl lg:-ml-6;
+  }
+
+  h3 {
+    @apply text-lg lg:-ml-5;
+  }
+
+  h4 {
+    @apply text-base lg:-ml-4;
+  }
+
+  h5 {
+    @apply text-sm lg:-ml-3;
+  }
+
+  h6 {
+    @apply text-xs lg:-ml-2;
+  }
+
+  /* 段落 */
+  & p {
+    @apply tracking-widest;
+    /* 行内代码 */
+    & code {
+      @apply before:content-['`'] after:content-['`'] font-bold text-black dark:text-white;
+    }
+  }
+
+  /* 外部链接 */
+  & a[target] {
+    @apply hover:underline mx-0.5 text-black dark:text-white;
+  }
+
+  /* 图片 */
+  img {
+    @apply object-cover cursor-pointer;
+  }
+
+  /* 引文 */
+  blockquote {
+    @apply inline-block bg-neutral/20 border-l-4 border-neutral-500 pl-4 pr-2 py-2;
+    & p {
+      @apply text-stone;
+    }
+  }
+
+  /* 表格 */
+  table {
+    @apply w-full text-center border;
+    th, td {
+      @apply border;
+    }
+  }
+
+  /* 无序列表 */
+  ul {
+    @apply list-disc-inside;
+    ul {
+      @apply ml-6 list-circle-inside;
+    }
+  }
+
+  /* 有序列表 */
+  ol {
+    @apply list-decimal-inside;
+    ol {
+      @apply ml-6 list-alpha-inside;
+    }
+  }
+
+  /* TOC */
+  .table-of-contents {
+    @apply hidden fixed top-20 left-2 lg:block;
+
+    .table-of-contents-anchor {
+      @apply block;
+
+      & > span {
+        @apply i-ri-menu-2-fill cursor-pointer dark:hover:text-white hover:text-black transition-colors;
+      }
+    }
+
+    &:hover {
+      ul {
+        @apply opacity-100;
+      }
+    }
+
+    ul {
+      @apply text-sm transition-opacity opacity-0 list-none;
+      & li > a {
+        @apply hover:(text-black underline) dark:hover:text-white;
+      }
+    }
+  }
+
+  & .markdown-alert > .markdown-alert-title + p {
+    @apply mt-2 dark:text-white text-black leading-normal;
+  }
+
+  & .markdown-magic-link.markdown-magic-link-github-at {
+    @apply pr-2 h-6 m-0 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 dark:hover:bg-neutral-7 hover:(bg-neutral-2 no-underline) no-underline;
+    .markdown-magic-link-image {
+      @apply bg-cover w-6 h-6 rounded-full inline-block;
+    }
+  }
+}

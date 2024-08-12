@@ -5,6 +5,7 @@ export default defineConfig({
   shortcuts: [
     ['text', 'text-neutral-500 hover:text-black dark:hover:text-white transition-colors'],
     ['link', 'text-neutral dark:text-neutral transition-colors underline-offset-2 hover:(underline text-black) dark:hover:text-white'],
+    ['svg', 'mx-auto w-1/2 border border-neutral'],
   ],
   presets: [
     presetUno(),

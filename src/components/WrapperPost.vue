@@ -8,6 +8,23 @@ import '~/styles/rich.css'
 const { frontmatter } = defineProps<{
   frontmatter?: Frontmatter & Partial<Post>
 }>()
+
+const backTopVisible = ref(false)
+
+onMounted(() => {
+  window.addEventListener('scroll', backTopVisibleHandler)
+})
+
+function backTopVisibleHandler() {
+  backTopVisible.value = scrollY > 300
+}
+
+function scrollTop() {
+  scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
 </script>
 
 <template>
@@ -20,5 +37,6 @@ const { frontmatter } = defineProps<{
       <DateFormat v-if="frontmatter?.date" mt-2 block :date="frontmatter.date" />
       <slot />
     </article>
+    <div v-show="backTopVisible" text-2xl bg="gray-5 hover:black dark:hover:white" transition-colors i-ri-arrow-up-line fixed bottom-2 right-2 cursor-pointer @click="scrollTop" />
   </div>
 </template>

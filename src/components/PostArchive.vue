@@ -33,7 +33,7 @@ const postsYearEntries = Object.entries(postsYearRecord)
 </script>
 
 <template>
-  <ol mt-4>
+  <ol mt-4 space-y-4>
     <li v-for="[year, posts] of postsYearEntries" :key="year">
       <h1 text="2xl">
         {{ year }}

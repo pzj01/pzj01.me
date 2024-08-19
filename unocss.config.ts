@@ -6,6 +6,8 @@ export default defineConfig({
     ['text', 'text-neutral-500 hover:text-black dark:hover:text-white transition-colors'],
     ['link', 'text-neutral dark:text-neutral transition-colors underline-offset-2 hover:(underline text-black) dark:hover:text-white'],
     ['svg', 'mx-auto w-1/2 border border-neutral'],
+    ['flex-center', 'flex justify-center items-center'],
+    ['btn', 'border p-2 rounded text'],
   ],
   presets: [
     presetUno(),

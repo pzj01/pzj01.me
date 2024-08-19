@@ -7,13 +7,25 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AudioWaterArt: typeof import('./src/components/AudioWaterArt.vue')['default']
-    BlogList: typeof import('./src/components/BlogList.vue')['default']
+    AccumulateDemo: typeof import('./src/components/demo/AccumulateDemo.vue')['default']
+    AdditiveDemo: typeof import('./src/components/demo/AdditiveDemo.vue')['default']
+    AnimateMotionDemo: typeof import('./src/components/demo/AnimateMotionDemo.vue')['default']
+    AudioWaterArt: typeof import('./src/components/MusicPlayer.vue')['default']
+    BezierCurveOneDemo: typeof import('./src/components/demo/BezierCurveOneDemo.vue')['default']
+    CalcModeDemo: typeof import('./src/components/demo/CalcModeDemo.vue')['default']
     DateFormat: typeof import('./src/components/DateFormat.vue')['default']
+    DraggableDemo: typeof import('./src/components/demo/DraggableDemo.vue')['default']
+    FeBelndDemo: typeof import('./src/components/demo/FeBelndDemo.vue')['default']
+    FeColorMatrixDemo: typeof import('./src/components/demo/FeColorMatrixDemo.vue')['default']
+    FeComponentTransferDemo: typeof import('./src/components/demo/FeComponentTransferDemo.vue')['default']
+    FeComposite: typeof import('./src/components/SVG/FeComposite.vue')['default']
+    FeCompositeDemo: typeof import('./src/components/demo/FeCompositeDemo.vue')['default']
+    FeConvolveMatrixDemo: typeof import('./src/components/demo/FeConvolveMatrixDemo.vue')['default']
+    FeDisplacementMapDemo: typeof import('./src/components/demo/FeDisplacementMapDemo.vue')['default']
+    FeMorphologyDemo: typeof import('./src/components/demo/FeMorphologyDemo.vue')['default']
+    FeTurbulenceDemo: typeof import('./src/components/demo/FeTurbulenceDemo.vue')['default']
     HeaderLink: typeof import('./src/components/HeaderLink.vue')['default']
-    MonacoEditor: typeof import('./src/components/MonacoEditor.vue')['default']
-    MonacoEditorDemo: typeof import('./src/components/MonacoEditorDemo.vue')['default']
-    Nav: typeof import('./src/components/Nav.vue')['default']
+    MusicPlayer: typeof import('./src/components/MusicPlayer.vue')['default']
     Post: typeof import('./src/components/Post.vue')['default']
     PostArchive: typeof import('./src/components/PostArchive.vue')['default']
     Posts: typeof import('./src/components/Posts.vue')['default']
@@ -21,7 +33,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TagList: typeof import('./src/components/TagList.vue')['default']
     TheNav: typeof import('./src/components/TheNav.vue')['default']
-    Wrapper: typeof import('./src/components/Wrapper.vue')['default']
     WrapperPost: typeof import('./src/components/WrapperPost.vue')['default']
   }
 }

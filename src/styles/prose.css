@@ -1,137 +1,143 @@
-/* enable css nesting */
 .prose {
   @apply mt-4 space-y-4;
-  
-  :is(h1, h2, h3, h4, h5, h6) {
-    @apply font-bold;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) {
+  @apply font-bold;
+  .anchor {
+    @apply hidden lg:inline-block opacity-0 transition-opacity;
+  }
+
+  &:hover {
     .anchor {
-      @apply hidden lg:inline-block opacity-0 transition-opacity;
-    }
-
-    &:hover {
-      .anchor {
-        @apply opacity-100;
-      }
+      @apply opacity-100;
     }
   }
+}
 
-  :is(p, blockquote, ul, ol, li, strong, em, s) {
-    @apply text-neutral-500;
-    &::selection {
-      @apply bg-black dark:(bg-white text-black) text-white;
-    }
-  }
-  
-  /* 标题 */
-  h1 {
-    @apply text-2xl lg:-ml-7;
-  }
+.prose :is(p, blockquote, ul, ol, li, strong, em, s) {
+  @apply text-neutral-500;
+}
 
-  h2 {
-    @apply text-xl lg:-ml-6;
-  }
+.prose :is(p, blockquote, ul, ol, li, strong, em, s)::selection {
+  @apply bg-black dark:(bg-white text-black) text-white;
+}
 
-  h3 {
-    @apply text-lg lg:-ml-5;
-  }
+/* 标题 */
+.prose h1 {
+  @apply text-2xl lg:-ml-7;
+}
 
-  h4 {
-    @apply text-base lg:-ml-4;
-  }
+.prose h2 {
+  @apply text-xl lg:-ml-6;
+}
 
-  h5 {
-    @apply text-sm lg:-ml-3;
-  }
+.prose h3 {
+  @apply text-lg lg:-ml-5;
+}
 
-  h6 {
-    @apply text-xs lg:-ml-2;
-  }
+.prose h4 {
+  @apply text-base lg:-ml-4;
+}
 
-  /* 段落 */
-  & p {
-    @apply tracking-widest;
-    /* 行内代码 */
-    & code {
-      @apply before:content-['`'] after:content-['`'] font-bold text-black dark:text-white;
-    }
-  }
+.prose h5 {
+  @apply text-sm lg:-ml-3;
+}
 
-  /* 外部链接 */
-  & a[target] {
-    @apply hover:underline mx-0.5 text-black dark:text-white;
-  }
+.prose h6 {
+  @apply text-xs lg:-ml-2;
+}
 
-  /* 图片 */
-  img {
-    @apply object-cover cursor-pointer;
-  }
+/* 段落 */
+.prose p {
+  @apply tracking-widest;
+  /* 行内代码 */
+}
 
-  /* 引文 */
-  blockquote {
-    @apply inline-block bg-neutral/20 border-l-4 border-neutral-500 pl-4 pr-2 py-2;
-    & p {
-      @apply text-stone;
-    }
-  }
+.prose p code {
+  @apply before:content-['`'] after:content-['`'] font-bold text-black dark:text-white;
+}
 
-  /* 表格 */
-  table {
-    @apply w-full text-center border;
-    th, td {
-      @apply border;
-    }
-  }
+/* 外部链接 */
+.prose a[target] {
+  @apply hover:underline mx-0.5 text-black dark:text-white;
+}
 
-  /* 无序列表 */
-  ul {
-    @apply list-disc-inside;
-    ul {
-      @apply ml-6 list-circle-inside;
-    }
-  }
+/* 图片 */
+.prose img {
+  @apply object-cover cursor-pointer;
+}
 
-  /* 有序列表 */
-  ol {
-    @apply list-decimal-inside;
-    ol {
-      @apply ml-6 list-alpha-inside;
-    }
-  }
+/* 引文 */
+.prose blockquote {
+  @apply inline-block bg-neutral/20 border-l-4 border-neutral-500 pl-4 pr-2 py-2;
+}
 
-  /* TOC */
-  .table-of-contents {
-    @apply hidden fixed top-20 left-2 lg:block;
+.prose blockquote p {
+  @apply text-stone;
+}
 
-    .table-of-contents-anchor {
-      @apply block;
+/* 表格 */
+.prose table {
+  @apply w-full text-center border;
+}
 
-      & > span {
-        @apply i-ri-menu-2-fill cursor-pointer dark:hover:text-white hover:text-black transition-colors;
-      }
-    }
+.prose table th,
+.prose table td {
+  @apply border;
+}
 
-    &:hover {
-      ul {
-        @apply opacity-100;
-      }
-    }
+/* 无序列表 */
+.prose ul {
+  @apply space-y-4 list-disc-inside;
+}
 
-    ul {
-      @apply text-sm transition-opacity opacity-0 list-none;
-      & li > a {
-        @apply hover:(text-black underline) dark:hover:text-white;
-      }
-    }
-  }
+.prose ul ul {
+  @apply ml-6 list-circle-inside;
+}
 
-  & .markdown-alert > .markdown-alert-title + p {
-    @apply mt-2 dark:text-white text-black leading-normal;
-  }
+/* 有序列表 */
+.prose ol {
+  @apply space-y-4 list-decimal-inside;
+}
 
-  & .markdown-magic-link.markdown-magic-link-github-at {
-    @apply pr-2 h-6 m-0 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 dark:hover:bg-neutral-7 hover:(bg-neutral-2 no-underline) no-underline;
-    .markdown-magic-link-image {
-      @apply bg-cover w-6 h-6 rounded-full inline-block;
-    }
-  }
+.prose ol ol {
+  @apply ml-6 list-alpha-inside;
+}
+
+/* TOC */
+.prose .table-of-contents {
+  @apply hidden fixed top-20 left-2 lg:block;
+}
+
+.prose .table-of-contents ul {
+  @apply space-y-none text-sm transition-opacity opacity-0 list-none;
+}
+
+.table-of-contents ul li > a {
+  @apply hover:(text-black underline) dark:hover:text-white;
+}
+
+.table-of-contents:hover ul {
+  @apply opacity-100;
+}
+
+.prose .table-of-contents .table-of-contents-anchor {
+  @apply block;
+}
+
+.table-of-contents-anchor span {
+  @apply i-ri-menu-2-fill cursor-pointer dark:hover:text-white hover:text-black transition-colors;
+}
+
+.prose .markdown-alert > .markdown-alert-title + p {
+  @apply mt-2 dark:text-white text-black leading-normal;
+}
+
+.prose .markdown-magic-link.markdown-magic-link-github-at {
+  @apply pr-2 h-6 m-0 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 dark:hover:bg-neutral-7 hover:(bg-neutral-2 no-underline) no-underline;
+}
+
+.markdown-magic-link .markdown-magic-link-image {
+  @apply bg-cover w-6 h-6 rounded-full inline-block;
 }

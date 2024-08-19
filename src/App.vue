@@ -18,6 +18,11 @@ onMounted(() => {
       isShowImg.value = false
     }
   })
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape')
+      isShowImg.value = false
+  })
 })
 </script>
 
@@ -28,7 +33,7 @@ onMounted(() => {
   </div>
   <Transition name="fade">
     <div v-if="isShowImg" z-10 fixed inset-0 backdrop-blur-lg flex="~ justify-center items-center">
-      <img object-cover max-w-screen max-h-screen w-full :src="image.src" :alt="image.alt">
+      <img object-cover h-full min-h-screen :src="image.src" :alt="image.alt">
     </div>
   </Transition>
 </template>

@@ -21,4 +21,4 @@ title: welcome 来到我的博客😀
 [斩服少女](https://www.bilibili.com/bangumi/media/md419)、[魔笛MAGI](https://www.bilibili.com/bangumi/media/md470)、[JOJO的奇妙冒险](https://zh.wikipedia.org/wiki/JoJo%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)、[Fate/Zero](https://www.bilibili.com/bangumi/media/md1650)、[反叛的鲁路修](https://zh.wikipedia.org/wiki/Code_Geass_%E5%8F%8D%E5%8F%9B%E7%9A%84%E9%AD%AF%E8%B7%AF%E4%BF%AE)等等。
 我最喜欢的还是[天元突破红莲螺岩](https://www.bilibili.com/bangumi/media/md27059477)。
 
-对于看📖小说我比较喜欢看**仙侠**和**武侠**系列的，我看过是金庸写的武侠小说和电视剧（*真的是好看*），**《雪中悍刀行》**、**《大道争锋》**、**《玄浑道章》**、**《蛊真人》**（*大爱仙尊YYDS*），现在正在👀 **《剑来》**（*可惜更新的太慢了*）。
+对于看📖小说我比较喜欢看**仙侠**和**武侠**系列的，我看过是金庸写的武侠小说和电视剧（*真的是好看*），**《雪中悍刀行》**、**《大道争锋》**、**《玄浑道章》**、**《蛊真人》**（*大爱仙尊YYDS*）、**《道诡异仙》**（*差点让我都分不清了*），现在正在👀 **《剑来》**（*可惜更新的太慢了*）。

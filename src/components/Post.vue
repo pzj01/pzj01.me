@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <RouterLink class="font-chinese" :to="path">
-    <span truncate text="~ lg lg:xl" class="w-2/3">{{ title }}</span>
+    <span block lg:inline text="~ lg lg:xl" class="w-full">{{ title }}</span>
     <span hidden lg:inline-block>·</span>
     <DateFormat block lg:inline text="xs lg:base" :date="date" />
   </RouterLink>

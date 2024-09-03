@@ -15,8 +15,21 @@
   }
 }
 
-.prose :is(p, blockquote, ul, ol, li, strong, em, s) {
+.prose p + :is(ol, ul) {
+  @apply ml-4;
+}
+
+.prose ul ol,
+.prose ol ul {
+  @apply ml-4 mt-4;
+}
+
+.prose :is(p, blockquote, ul, ol, li, em, s) {
   @apply text-neutral-500;
+}
+
+.prose :is(strong) {
+  @apply text-black dark:text-white;
 }
 
 .prose :is(p, blockquote, ul, ol, li, strong, em, s)::selection {
@@ -54,7 +67,8 @@
   /* 行内代码 */
 }
 
-.prose p code {
+.prose p code,
+.prose li code {
   @apply before:content-['`'] after:content-['`'] font-bold text-black dark:text-white;
 }
 

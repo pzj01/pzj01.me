@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { compareDesc } from 'date-fns'
 import type { Post } from '../types'
 
 const { type = 'blog' } = defineProps<{
@@ -16,6 +17,7 @@ const posts: Post[] = router.getRoutes()
     description: frontmatter?.description,
     path,
   }))
+  .sort((a, b) => compareDesc(a.date, b.date))
 </script>
 
 <template>

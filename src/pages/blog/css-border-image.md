@@ -2,7 +2,7 @@
 title: 一个没有怎么使用过的边框属性🧐 → border-image
 description: 使用border-image属性创建图片边框
 date: 2024-06-17
-duration: 5分钟
+duration: 5min
 tags: [CSS]
 ---
 

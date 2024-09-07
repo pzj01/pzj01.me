@@ -84,7 +84,7 @@
 
 /* 引文 */
 .prose blockquote {
-  @apply inline-block bg-neutral/20 border-l-4 border-neutral-500 pl-4 pr-2 py-2;
+  @apply space-y-4 inline-block bg-neutral/20 border-l-4 border-neutral-500 pl-4 pr-2 py-2;
 }
 
 .prose blockquote p {
@@ -154,4 +154,24 @@
 
 .markdown-magic-link .markdown-magic-link-image {
   @apply bg-cover w-6 h-6 rounded-full inline-block;
+}
+
+.markdown-alert-note {
+  background-color: #0969da33;
+}
+
+.markdown-alert-tip {
+  background-color: #1a7f3733;
+}
+
+.markdown-alert-important {
+  background-color: #8250df33;
+}
+
+.markdown-alert-caution {
+  background-color: #d1242f33;
+}
+
+.markdown-alert-warning {
+  background-color: #9a670033;
 }

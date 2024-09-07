@@ -40,8 +40,8 @@ const postsYearEntries = Object.entries(postsYearRecord)
       </h1>
       <hr>
       <ol space-y-4>
-        <li v-for="{ title, path, date } of posts" :key="path">
-          <Post :path :title :date />
+        <li v-for="{ title, path, date, duration } of posts" :key="path">
+          <Post :path :title :date :duration />
         </li>
       </ol>
     </li>

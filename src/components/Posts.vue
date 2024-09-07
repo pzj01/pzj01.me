@@ -22,8 +22,8 @@ const posts: Post[] = router.getRoutes()
 
 <template>
   <ol mt-4 space-y-4>
-    <li v-for="{ path, title, date } in posts" :key="title">
-      <Post :path :title :date />
+    <li v-for="{ path, title, date, duration } in posts" :key="title">
+      <Post :path :title :date :duration />
     </li>
   </ol>
 </template>

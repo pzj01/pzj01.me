@@ -25,7 +25,7 @@
 }
 
 .prose :is(p, blockquote, ul, ol, li, em, s) {
-  @apply text-neutral-500;
+  @apply text-neutral-500 text-pretty;
 }
 
 .prose :is(strong) {
@@ -107,7 +107,7 @@
 }
 
 .prose ul ul {
-  @apply ml-6 list-circle-inside;
+  @apply ml-6 mt-4 list-circle-inside;
 }
 
 /* 有序列表 */
@@ -116,7 +116,7 @@
 }
 
 .prose ol ol {
-  @apply ml-6 list-alpha-inside;
+  @apply ml-6 mt-4 list-alpha-inside;
 }
 
 /* TOC */

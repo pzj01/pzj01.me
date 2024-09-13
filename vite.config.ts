@@ -132,4 +132,14 @@ export default defineConfig({
       vueTemplate: true,
     }),
   ],
+
+  server: {
+    proxy: {
+      '/map': {
+        target: 'https://api.map.baidu.com',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/map/, ''),
+      },
+    },
+  },
 })

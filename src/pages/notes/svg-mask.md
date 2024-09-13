@@ -1,5 +1,5 @@
 ---
-title: SVG-遮罩
+title: SVG 遮罩
 description: 使用mask属性进行遮罩
 date: 2024-04-18
 duration: 5分钟

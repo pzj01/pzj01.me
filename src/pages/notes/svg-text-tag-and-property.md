@@ -1,5 +1,5 @@
 ---
-title: SVG-Text标签和属性
+title: SVG Text标签和属性
 description: 在SVG中绘制文本和设置文本属性
 duration: 4分钟
 date: 2024-04-08

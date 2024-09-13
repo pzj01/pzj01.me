@@ -1,5 +1,5 @@
 ---
-title: SVG-基本图形
+title: SVG 基本图形
 description: 学习SVG的基本图形
 duration: 10分钟
 date: 2024-03-05

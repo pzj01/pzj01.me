@@ -5,10 +5,10 @@ const { playing } = useMediaControls(audio, {
   src: '/audio/ASilentSummer.mp3',
 })
 
-onMounted(() => {
-  audio.autoplay = true
-  audio.loop = true
-})
+// onMounted(() => {
+//   audio.autoplay = true
+//   audio.loop = true
+// })
 </script>
 
 <template>

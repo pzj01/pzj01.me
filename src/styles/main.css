@@ -2,6 +2,10 @@
   @apply scroll-smooth;
 }
 
+body {
+  @apply overflow-x-hidden;
+}
+
 .font-chinese {
   font-family: Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -30,4 +34,20 @@ summary {
 }
 .dark::view-transition-new(root) {
   @apply z-1;
+}
+
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-neutral-2 dark:bg-neutral-9 transition-colors;
+}
+
+::-webkit-scrollbar-corner {
+  @apply appearance-none;
 }

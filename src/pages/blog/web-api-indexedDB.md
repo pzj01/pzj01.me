@@ -1,5 +1,5 @@
 ---
-title: Web API - IndexedDB
+title: Web API —— IndexedDB
 description: 了解 IndexedDB
 date: 2024-08-24T9:00:00
 duration: 6min

@@ -125,7 +125,7 @@
 }
 
 .prose .table-of-contents ul {
-  @apply space-y-none text-sm transition-opacity opacity-0 list-none;
+  @apply my-0 space-y-none text-sm transition-opacity opacity-0 list-none;
 }
 
 .table-of-contents ul li > a {

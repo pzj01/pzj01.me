@@ -1,5 +1,5 @@
 ---
-title: Web API - Worker
+title: Web API —— Worker
 description: 使用 Worker 处理异步的任务
 date: 2024-09-04
 duration: 5min

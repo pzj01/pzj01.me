@@ -3,7 +3,7 @@ title: Markdown 语法
 description: 掌握 Markdown 语法
 date: 2024-06-29T00:00:00
 duration: 5min
-tags: [markdown]
+tags: [Markdown]
 ---
 
 [[TOC]]

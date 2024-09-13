@@ -1,5 +1,5 @@
 ---
-title: SVG-图案填充和描边
+title: SVG 图案填充和描边
 description: 了解SVG的图案填充和描边
 date: 2024-04-22
 duration: 5分钟

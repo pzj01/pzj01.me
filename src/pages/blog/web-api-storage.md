@@ -1,5 +1,5 @@
 ---
-title: Web API - Storage(存储)
+title: Web API —— Storage(存储)
 description: 了解 localStorage 和 sessionStorage
 date: 2024-08-21T10:14:00
 duration: 2min

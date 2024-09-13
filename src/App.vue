@@ -31,9 +31,11 @@ onMounted(() => {
     <TheNav />
     <RouterView />
   </div>
-  <Transition name="fade">
-    <div v-if="isShowImg" z-10 fixed inset-0 backdrop-blur-lg flex="~ justify-center items-center">
-      <img object-cover h-full min-h-screen :src="image.src" :alt="image.alt">
-    </div>
-  </Transition>
+  <Teleport to="body">
+    <Transition name="fade">
+      <div v-if="isShowImg" z-10 fixed inset-0 backdrop-blur-lg flex="~ justify-center items-center">
+        <img object-cover h-full min-h-screen :src="image.src" :alt="image.alt">
+      </div>
+    </Transition>
+  </Teleport>
 </template>

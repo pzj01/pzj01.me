@@ -1,5 +1,5 @@
 ---
-title: SVG-渐变
+title: SVG 渐变
 description: 学习SVG的渐变
 duration: 10分钟
 date: 2024-04-16

@@ -1,5 +1,5 @@
 ---
-title: Web API - Clipboard(剪切板)
+title: Web API —— Clipboard(剪切板)
 description: 使用浏览器的剪切板 API
 date: 2024-09-07T09:55:00
 duration: 5min

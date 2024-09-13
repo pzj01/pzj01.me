@@ -1,5 +1,5 @@
 ---
-title: SVG-Path标签
+title: SVG Path标签
 description: 在SVG中绘制路径
 date: 2024-03-13
 duration: 20分钟

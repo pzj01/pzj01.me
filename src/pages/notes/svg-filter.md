@@ -1,5 +1,5 @@
 ---
-title: SVG-滤镜
+title: SVG 滤镜
 description: 学习SVG的滤镜
 duration: 20分钟
 date: 2024-05-06

@@ -51,3 +51,7 @@ summary {
 ::-webkit-scrollbar-corner {
   @apply appearance-none;
 }
+
+#nprogress .bar {
+  @apply bg-emerald;
+}

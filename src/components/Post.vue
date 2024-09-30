@@ -8,11 +8,14 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink class="font-chinese" :to="path">
-    <span block lg:inline text="~ lg lg:xl" w-full>{{ title }}</span>
-    <span hidden lg:inline-block>·</span>
-    <div inline-flex gap-1 text="xs lg:base">
-      <DateFormat block lg:inline :date="date" />
+  <RouterLink class="font-chinese" flex="~ col xl:row xl:items-center" :to="path">
+    <div text="~ lg lg:xl">
+      <span>{{ title }}</span>
+    </div>
+    <span hidden xl:block>·</span>
+    <div flex="~ items-center" text="xs lg:sm xl:base">
+      <DateFormat :date="date" />
+      <span>·</span>
       <span flex="~ items-center gap-px" text-neutral-400>
         <i i-ri-time-line />
         {{ duration }}

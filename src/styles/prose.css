@@ -4,15 +4,14 @@
 
 .prose :is(h1, h2, h3, h4, h5, h6) {
   @apply font-bold;
-  .anchor {
-    @apply hidden lg:inline-block opacity-0 transition-opacity;
-  }
+}
 
-  &:hover {
-    .anchor {
-      @apply opacity-100;
-    }
-  }
+.prose :is(h1, h2, h3, h4, h5, h6) .anchor {
+  @apply hidden lg:inline-block opacity-0 transition-opacity;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6):hover .anchor {
+  @apply opacity-100;
 }
 
 .prose p + :is(ol, ul) {
@@ -38,27 +37,27 @@
 
 /* 标题 */
 .prose h1 {
-  @apply text-2xl lg:-ml-7;
+  @apply text-2xl mt-12! mb-6! lg:-ml-7;
 }
 
 .prose h2 {
-  @apply text-xl lg:-ml-6;
+  @apply text-xl mt-11! mb-5! lg:-ml-6;
 }
 
 .prose h3 {
-  @apply text-lg lg:-ml-5;
+  @apply text-lg mt-10! mb-4! lg:-ml-5;
 }
 
 .prose h4 {
-  @apply text-base lg:-ml-4;
+  @apply text-base mt-9! mb-3! lg:-ml-4;
 }
 
 .prose h5 {
-  @apply text-sm lg:-ml-3;
+  @apply text-sm mt-8! mb-2! lg:-ml-3;
 }
 
 .prose h6 {
-  @apply text-xs lg:-ml-2;
+  @apply text-xs mt-7! mb-1! lg:-ml-2;
 }
 
 /* 段落 */

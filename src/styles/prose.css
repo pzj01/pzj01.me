@@ -120,7 +120,7 @@
 
 /* TOC */
 .prose .table-of-contents {
-  @apply hidden fixed top-20 left-2 lg:block;
+  @apply hidden fixed w-1/5 top-20 left-2 lg:block;
 }
 
 .prose .table-of-contents ul {

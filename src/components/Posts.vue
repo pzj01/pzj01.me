@@ -22,7 +22,7 @@ const posts: Post[] = router.getRoutes()
 
 <template>
   <ol mt-4 space-y-4 lg:space-y-6>
-    <li v-for="{ path, title, date, duration } in posts" :key="title">
+    <li v-for="{ path, title, date, duration }, i in posts" :key="title" slide-enter :style="`--enter-stage: ${i};--enter-step: 60ms;`">
       <Post :path :title :date :duration />
     </li>
   </ol>

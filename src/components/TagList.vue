@@ -14,7 +14,7 @@ const tags = new Set<string>(
 
 <template>
   <ul mt-4 flex="~ wrap gap-2" text="sm">
-    <li v-for="tag in tags" :key="tag">
+    <li v-for="tag, i in tags" :key="tag" slide-enter :style="`--enter-stage: ${i};--enter-step: 60ms;`">
       <RouterLink rounded-full transition-colors hover:bg-gray-2 dark:hover:bg-gray-7 border-1 py-1 px-2 flex="~ items-center" :to="`/tags/${tag}`">
         <i i-ri-hashtag />
         {{ tag }}

@@ -64,7 +64,7 @@ export default defineConfig({
 
     // https://github.com/unplugin/unplugin-vue-markdown
     Markdown({
-      wrapperClasses: path => path.endsWith('blog/index.md') || path.endsWith('notes/index.md') || path.endsWith('archive.md') || path.includes('/tags') ? '' : 'prose',
+      wrapperClasses: path => path.endsWith('blog/index.md') || path.endsWith('notes/index.md') || path.endsWith('archive.md') || path.includes('/tags') ? '' : 'prose slide-enter-content',
       wrapperComponent: 'WrapperPost',
       headEnabled: true,
       async markdownItSetup(md) {
@@ -75,7 +75,6 @@ export default defineConfig({
             dark: 'vitesse-dark',
           },
           transformers: [
-            // @ts-expect-error missing types
             transformerTwoslash({
               explicitTrigger: true,
               renderer: rendererRich(),
@@ -95,7 +94,7 @@ export default defineConfig({
           })
         // 链接属性
           .use(linkAttributes, {
-            matcher: (href: string) => href.startsWith('http') || href.startsWith('/'),
+            matcher: (href: string) => href.startsWith('http'),
             attrs: {
               target: '_blank',
               rel: 'noopener',
@@ -132,6 +131,10 @@ export default defineConfig({
       vueTemplate: true,
     }),
   ],
+
+  ssr: {
+    noExternal: ['gsap'],
+  },
 
   server: {
     proxy: {

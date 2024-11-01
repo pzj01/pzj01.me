@@ -62,7 +62,7 @@
 
 /* 段落 */
 .prose p {
-  @apply tracking-widest;
+  @apply tracking-widest leading-relaxed;
   /* 行内代码 */
 }
 
@@ -71,8 +71,8 @@
   @apply before:content-['`'] after:content-['`'] font-bold text-black dark:text-white;
 }
 
-/* 外部链接 */
-.prose a[target] {
+/* 链接 */
+.prose a {
   @apply hover:underline mx-0.5 text-black dark:text-white;
 }
 
@@ -102,7 +102,7 @@
 
 /* 无序列表 */
 .prose ul {
-  @apply space-y-4 list-disc-inside;
+  @apply space-y-2 list-disc-inside;
 }
 
 .prose ul ul {
@@ -141,6 +141,16 @@
 
 .table-of-contents-anchor span {
   @apply i-ri-menu-2-fill cursor-pointer dark:hover:text-white hover:text-black transition-colors;
+}
+
+.prose .markdown-alert ul,
+.prose .markdown-alert ol {
+  @apply space-y-none;
+}
+
+.prose .markdown-alert ul li,
+.prose .markdown-alert ol li {
+  @apply dark:text-white text-black;
 }
 
 .prose .markdown-alert > .markdown-alert-title + p {

@@ -21,11 +21,24 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(async ({ coords: { latitude, longitude } }) => {
       location.value = '获取中...'
-      const address = await getGeolocation(latitude, longitude)
-      address && (location.value = address)
-    }, (error) => {
-      location.value = '请打开地理位置权限'
-      console.log(error)
+      console.log(latitude, longitude)
+      // const address = await getGeolocation(latitude, longitude)
+      // address && (location.value = address)
+    }, (error: GeolocationPositionError) => {
+      switch (error.code) {
+        case GeolocationPositionError.PERMISSION_DENIED:
+          location.value = '请允许地理位置权限'
+          break
+        case GeolocationPositionError.POSITION_UNAVAILABLE:
+          location.value = '位置信息不可用'
+          break
+        case GeolocationPositionError.TIMEOUT:
+        default:
+          location.value = '获取位置超时'
+          break
+      }
+    }, {
+      timeout: 3000,
     })
   }
 }

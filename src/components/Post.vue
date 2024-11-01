@@ -2,7 +2,7 @@
 defineProps<{
   path: string
   title: string
-  date: string
+  date: number | string | Date
   duration: string
 }>()
 </script>

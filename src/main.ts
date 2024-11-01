@@ -27,11 +27,15 @@ export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) =>
     NProgress.configure({
       showSpinner: false,
     })
-    router.beforeEach(() => {
+    router.beforeEach((to, from) => {
+      if (to.path === from.path)
+        return
       NProgress.start()
     })
 
-    router.afterEach(() => {
+    router.afterEach((to, from) => {
+      if (to.path === from.path)
+        return
       NProgress.done()
     })
   }

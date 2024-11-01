@@ -1,8 +1,8 @@
 {
   "name": "pzj01.me",
   "type": "module",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.5.0",
   "author": "pzj01 <2949195453@qq.com>",
   "scripts": {
     "dev": "vite --host --port 3333",

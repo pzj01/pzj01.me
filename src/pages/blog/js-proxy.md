@@ -3,7 +3,7 @@ title: JavaScript 中的 Proxy(代理对象)
 description: 了解JS的代理对象 Proxy
 date: 2024-09-10
 duration: 3min
-tag: [JavaScript, Proxy]
+tags: [JavaScript, Proxy]
 ---
 
 `Proxy` 是 JavaScript 中的内置对象，它是一种用来创建对象的代理对象。`Proxy` 用于实现对对象的拦截，以及对对象的属性的读取和设置。

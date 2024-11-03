@@ -31,6 +31,7 @@ declare module 'vue-router/auto-routes' {
     '/blog/javascript-style-guide': RouteRecordInfo<'/blog/javascript-style-guide', '/blog/javascript-style-guide', Record<never, never>, Record<never, never>>,
     '/blog/jetpack-compose-state-and-recomposition': RouteRecordInfo<'/blog/jetpack-compose-state-and-recomposition', '/blog/jetpack-compose-state-and-recomposition', Record<never, never>, Record<never, never>>,
     '/blog/js-arraybuffer': RouteRecordInfo<'/blog/js-arraybuffer', '/blog/js-arraybuffer', Record<never, never>, Record<never, never>>,
+    '/blog/js-file-upload': RouteRecordInfo<'/blog/js-file-upload', '/blog/js-file-upload', Record<never, never>, Record<never, never>>,
     '/blog/js-proxy': RouteRecordInfo<'/blog/js-proxy', '/blog/js-proxy', Record<never, never>, Record<never, never>>,
     '/blog/js-reflect': RouteRecordInfo<'/blog/js-reflect', '/blog/js-reflect', Record<never, never>, Record<never, never>>,
     '/blog/markdown-grammer': RouteRecordInfo<'/blog/markdown-grammer', '/blog/markdown-grammer', Record<never, never>, Record<never, never>>,

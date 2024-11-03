@@ -3,7 +3,7 @@ title: Javascript 和 Proxy 紧密联系的 Reflect
 description: 了解 JS 的 Reflect API
 date: 2024-09-09
 duration: 7min
-tag: [JavaScript, Reflect]
+tags: [JavaScript, Reflect]
 ---
 
 [[TOC]]

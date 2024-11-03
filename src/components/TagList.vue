@@ -8,8 +8,6 @@ const tags = new Set<string>(
     .map(route => route.meta.frontmatter?.tags)
     .flat(),
 )
-
-// onMounted(() => console.log(tags))
 </script>
 
 <template>

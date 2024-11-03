@@ -16,8 +16,8 @@ const routes = useRouter().getRoutes()
     </h1>
     <hr>
     <ul space-y-4>
-      <li v-for="{ path, meta: { frontmatter } } of routes" :key="path">
-        <Post :path :title="frontmatter!.title" :date="frontmatter!.date" />
+      <li v-for="{ path, meta: { frontmatter: { title, date, duration } = {} } } of routes" :key="path">
+        <Post :path :title :date :duration />
       </li>
     </ul>
   </WrapperPost>

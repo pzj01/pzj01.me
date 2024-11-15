@@ -97,7 +97,7 @@
 
 .prose table th,
 .prose table td {
-  @apply border;
+  @apply border p-2;
 }
 
 /* 无序列表 */

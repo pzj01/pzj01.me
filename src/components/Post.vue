@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink class="font-chinese" flex="~ col xl:row xl:items-center" :to="path">
+  <RouterLink lg:text-nowrap flex="~ col xl:row xl:items-center" :to="path">
     <div text="~ lg lg:xl">
       <span>{{ title }}</span>
     </div>

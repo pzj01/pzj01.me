@@ -69,6 +69,7 @@
 .prose p code,
 .prose li code {
   @apply before:content-['`'] after:content-['`'] font-bold text-black dark:text-white;
+  font-family: 'Input';
 }
 
 /* 链接 */

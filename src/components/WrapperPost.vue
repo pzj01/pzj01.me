@@ -12,9 +12,7 @@ const { frontmatter } = defineProps<{
 const backTopVisible = ref(false)
 const isPost = computed(() => !!frontmatter?.date)
 
-onMounted(() => {
-  window.addEventListener('scroll', backTopVisibleHandler)
-})
+useEventListener('scroll', backTopVisibleHandler)
 
 function backTopVisibleHandler() {
   backTopVisible.value = scrollY > 300
@@ -47,6 +45,8 @@ function back() {
         <span text="neutral-500 hover:neutral-600 dark:hover:text-neutral-400" font-bold cursor-default @click="back">~ cd ../</span>
       </div>
     </article>
-    <div v-show="backTopVisible" text-2xl bg="gray-5 hover:black dark:hover:white" transition-colors i-ri-arrow-up-line fixed bottom-2 right-2 cursor-pointer @click="scrollTop" />
+    <div v-show="backTopVisible" s-10 hover:bg-neutral-500:30 rounded-full flex-center transition-colors fixed bottom-2 right-2 cursor-pointer @click="scrollTop">
+      <i s-6 i-ri-arrow-up-line />
+    </div>
   </div>
 </template>

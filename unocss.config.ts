@@ -1,5 +1,5 @@
-import { defineConfig } from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno, presetWebFonts, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { defineConfig } from 'unocss/vite'
 
 export default defineConfig({
   shortcuts: [
@@ -8,6 +8,12 @@ export default defineConfig({
     ['svg', 'mx-auto w-1/2 border border-neutral'],
     ['flex-center', 'flex justify-center items-center'],
     ['btn', 'flex items-center border p-2 rounded text'],
+  ],
+  rules: [
+    [/s-(\d+)/, ([, d]) => {
+      const value = `${Number(d) * 0.25}rem`
+      return { width: value, height: value }
+    }],
   ],
   presets: [
     presetUno(),
@@ -21,7 +27,9 @@ export default defineConfig({
     presetWebFonts({
       provider: 'google',
       fonts: {
-        sans: ['Roboto:400,600,800'],
+        // 衬线字体
+        sans: 'Roboto:400,600,800',
+        // 无衬线字体
         serif: 'Cormorant Garamond:400,600',
       },
     }),

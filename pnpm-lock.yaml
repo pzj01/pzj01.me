@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/spark-md5':
+        specifier: ^3.0.5
+        version: 3.0.5
       '@vueuse/core':
         specifier: ^11.1.0
         version: 11.1.0(vue@3.5.12(typescript@5.6.3))
@@ -20,6 +23,9 @@ importers:
       nprogress:
         specifier: ^0.2.0
         version: 0.2.0
+      spark-md5:
+        specifier: ^3.0.2
+        version: 3.0.2
       vue:
         specifier: ^3.5.12
         version: 3.5.12(typescript@5.6.3)
@@ -33,6 +39,12 @@ importers:
       '@antfu/eslint-config':
         specifier: ^3.8.0
         version: 3.8.0(@typescript-eslint/utils@8.12.1(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3)
+      '@iconify-json/devicon':
+        specifier: ^1.2.5
+        version: 1.2.5
+      '@iconify-json/logos':
+        specifier: ^1.2.3
+        version: 1.2.3
       '@iconify-json/ri':
         specifier: ^1.2.2
         version: 1.2.2
@@ -582,6 +594,12 @@ packages:
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
 
+  '@iconify-json/devicon@1.2.5':
+    resolution: {integrity: sha512-yDx5UDO/W6ySfc68q5i+RaGenXYcEgawdgVx4CZEV6tVdbT6LwrFwRF/hvds26bu4HhR3bQeB0czGUeahw/TEQ==}
+
+  '@iconify-json/logos@1.2.3':
+    resolution: {integrity: sha512-JLHS5hgZP1b55EONAWNeqBUuriRfRNKWXK4cqYx0PpVaJfIIMiiMxFfvoQiX/bkE9XgkLhcKmDUqL3LXPdXPwQ==}
+
   '@iconify-json/ri@1.2.2':
     resolution: {integrity: sha512-7i6uxb8guYyyWtcf23QgKXlipvwaqBSnm3tGgo0eBlc1C8C1rHVEJXManwB7PrxWXLAecBL/Sb+0zaLfSYeQzg==}
 
@@ -828,6 +846,9 @@ packages:
 
   '@types/nprogress@0.2.3':
     resolution: {integrity: sha512-k7kRA033QNtC+gLc4VPlfnue58CM1iQLgn1IMAU8VPHGOj7oIHPp9UlhedEnD/Gl8evoCjwkZjlBORtZ3JByUA==}
+
+  '@types/spark-md5@3.0.5':
+    resolution: {integrity: sha512-lWf05dnD42DLVKQJZrDHtWFidcLrHuip01CtnC2/S6AMhX4t9ZlEUj4iuRlAnts0PQk7KESOqKxeGE/b6sIPGg==}
 
   '@types/unist@2.0.10':
     resolution: {integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==}
@@ -2511,6 +2532,9 @@ packages:
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
 
+  spark-md5@3.0.2:
+    resolution: {integrity: sha512-wcFzz9cDfbuqe0FZzfi2or1sgyIrsDwmPwfZC4hiNidPdPINjeUwNfv5kldczoEAcjl9Y1L3SM7Uz2PUEQzxQw==}
+
   spdx-correct@3.2.0:
     resolution: {integrity: sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==}
 
@@ -3329,6 +3353,14 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.1': {}
 
+  '@iconify-json/devicon@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/logos@1.2.3':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/ri@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
@@ -3566,6 +3598,8 @@ snapshots:
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/nprogress@0.2.3': {}
+
+  '@types/spark-md5@3.0.5': {}
 
   '@types/unist@2.0.10': {}
 
@@ -5664,6 +5698,8 @@ snapshots:
   source-map@0.6.1: {}
 
   space-separated-tokens@2.0.2: {}
+
+  spark-md5@3.0.2: {}
 
   spdx-correct@3.2.0:
     dependencies:

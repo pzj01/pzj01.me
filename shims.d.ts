@@ -1,10 +1,11 @@
 /// <reference types="vite/client" />
 
-import 'vue-router'
+import type { Frontmatter } from 'unplugin-vue-markdown/types'
+import type { Post } from './src/types'
 
 declare module 'vue-router' {
   interface RouteMeta {
-    frontmatter?: Record<string, any>
+    frontmatter?: Frontmatter & Partial<Post>
   }
 }
 

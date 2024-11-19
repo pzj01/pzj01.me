@@ -1,8 +1,7 @@
+import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
-import { createHead } from '@unhead/vue'
 import { routes } from 'vue-router/auto-routes'
 import { setupRouterScroller } from 'vue-router-better-scroller'
-import NProgress from 'nprogress'
 import App from './App.vue'
 // 进度条
 import 'nprogress/nprogress.css'
@@ -15,8 +14,7 @@ import './styles/main.css'
 
 import 'uno.css'
 
-export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) => {
-  const head = createHead()
+export const createApp = ViteSSG(App, { routes }, ({ router, isClient }) => {
   if (isClient) {
     setupRouterScroller(router, {
       selectors: {
@@ -39,5 +37,4 @@ export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) =>
       NProgress.done()
     })
   }
-  app.use(head)
 })

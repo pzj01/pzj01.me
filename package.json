@@ -12,16 +12,20 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@types/spark-md5": "^3.0.5",
     "@vueuse/core": "^11.1.0",
     "date-fns": "^4.1.0",
     "gsap": "^3.12.5",
     "nprogress": "^0.2.0",
+    "spark-md5": "^3.0.2",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
     "vue-router-better-scroller": "^0.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
+    "@iconify-json/devicon": "^1.2.5",
+    "@iconify-json/logos": "^1.2.3",
     "@iconify-json/ri": "^1.2.2",
     "@iconify-json/simple-icons": "^1.2.10",
     "@shikijs/markdown-it": "^1.22.2",

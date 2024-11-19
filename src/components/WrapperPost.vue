@@ -36,7 +36,7 @@ function back() {
 
 <template>
   <!-- <AudioWaterArt /> -->
-  <div p-4 class="font-chinese">
+  <div p-4 font-sans>
     <article class="mx-auto md:w-3/4 lg:w-1/2">
       <h1 :class="!isPost && 'mb-12 lg:mb-16'" text="3xl lg:4xl pretty" font-bold>
         {{ frontmatter?.title }}

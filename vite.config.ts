@@ -1,25 +1,25 @@
-import { resolve } from 'node:path'
 import { readFileSync } from 'node:fs'
-import { defineConfig } from 'vite'
+import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import { defineConfig } from 'vite'
 // unplugin
 import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
-import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import VueRouter from 'unplugin-vue-router/vite'
 // markdown-it
 import Shiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
+import matter from 'gray-matter'
 import anchor from 'markdown-it-anchor'
-import linkAttributes from 'markdown-it-link-attributes'
 import githubAlerts from 'markdown-it-github-alerts'
+import linkAttributes from 'markdown-it-link-attributes'
 import magicLink from 'markdown-it-magic-link'
+
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
-
-import matter from 'gray-matter'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -135,8 +135,11 @@ export default defineConfig({
   ssr: {
     noExternal: ['gsap'],
   },
-
   server: {
+    // https: {
+    //   key: readFileSync('./.examples/api-server/localhost-key.pem'),
+    //   cert: readFileSync('./.examples/api-server/localhost.pem'),
+    // },
     proxy: {
       '/map': {
         target: 'https://api.map.baidu.com',

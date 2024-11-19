@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { compareDesc } from 'date-fns'
 import type { Post } from '../types'
+import { compareDesc } from 'date-fns'
 
 const { type = 'blog' } = defineProps<{
   type: 'blog' | 'notes'

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { compareDesc, toDate } from 'date-fns'
 import type { Post } from '../types'
+import { compareDesc, toDate } from 'date-fns'
 
 const router = useRouter()
 const postsYearRecord = router.getRoutes()

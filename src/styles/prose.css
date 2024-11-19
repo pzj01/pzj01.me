@@ -73,7 +73,7 @@
 }
 
 /* 链接 */
-.prose a {
+.prose a:not(.markdown-magic-link) {
   @apply hover:underline mx-0.5 text-black dark:text-white;
 }
 
@@ -144,25 +144,26 @@
   @apply i-ri-menu-2-fill cursor-pointer dark:hover:text-white hover:text-black transition-colors;
 }
 
-.prose .markdown-alert ul,
-.prose .markdown-alert ol {
+.markdown-alert ul,
+.markdown-alert ol {
   @apply space-y-none;
 }
 
-.prose .markdown-alert ul li,
-.prose .markdown-alert ol li {
+.markdown-alert ul li,
+.markdown-alert ol li {
   @apply dark:text-white text-black;
 }
 
-.prose .markdown-alert > .markdown-alert-title + p {
+.markdown-alert > .markdown-alert-title + p {
   @apply mt-2 dark:text-white text-black leading-normal;
 }
 
-.prose .markdown-magic-link.markdown-magic-link-github-at {
-  @apply pr-2 h-6 m-0 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 dark:hover:bg-neutral-7 hover:(bg-neutral-2 no-underline) no-underline;
+/* github 魔法链接 */
+.markdown-magic-link {
+  @apply pr-2 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 hover:bg-neutral/30 text;
 }
 
-.markdown-magic-link .markdown-magic-link-image {
+.markdown-magic-link-image {
   @apply bg-cover w-6 h-6 rounded-full inline-block;
 }
 

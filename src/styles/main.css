@@ -5,7 +5,7 @@
   display: swap;
 }
 
-.font-input {
+.font-input, [font-input] {
   font-family: 'Input';
 }
 

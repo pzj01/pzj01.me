@@ -8,12 +8,12 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink lg:text-nowrap flex="~ col xl:row xl:items-center" :to="path">
+  <RouterLink lg:text-nowrap flex="~ col gap-x-2 xl:row xl:items-center" :to="path">
     <div text="~ lg lg:xl">
       <span>{{ title }}</span>
     </div>
     <span hidden xl:block>·</span>
-    <div flex="~ items-center" text="xs lg:sm xl:base">
+    <div flex="~ gap-x-1 lg:gap-x-2 items-center" text="xs lg:sm xl:base">
       <DateFormat :date="date" />
       <span>·</span>
       <span flex="~ items-center gap-px" text-neutral-400>

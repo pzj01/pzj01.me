@@ -79,7 +79,9 @@ socialLinks:
 
 # Idol
 
-{@antfu} {@yyx990803} {@sxzz} {@posva} {@HcySunYang}
+- {@antfu} {@yyx990803}
+- {@sxzz} {@posva}
+- {@HcySunYang}
 
 # Where to find me ?
 

@@ -1,6 +1,6 @@
 ---
-title: PZJ 's personal website
-description: PZJ 's personal website
+title: pzj's personal website
+description: pzj's personal website
 stack:
   - name: HTML5
     icon: i-devicon-html5
@@ -39,18 +39,21 @@ stack:
   - name: Figma
     icon: i-devicon-figma
 socialLinks:
+  - provider: Bluesky
+    icon: i-ri-bluesky-fill
+    url: https://bsky.app/profile/pzj01.bsky.social
   - provider: GitHub
     icon: i-ri-github-fill
     url: https://github.com/pzj01
   - provider: Twitter
     icon: i-ri-twitter-x-fill
-    url: https://www.x.com/pzj01
-  - provider: QQ
+    url: https://x.com/wojishidao
+  - provider: QQ：2949195453
     icon: i-ri-qq-fill
     url: https://user.qzone.qq.com/2949195453
-  - provider: WeChat
+  - provider: WeChat：yys2949195453
     icon: i-ri-wechat-fill
-    url: https://weixin.qq.com/r/pzj01
+    url: https://weixin.qq.com
 ---
 
 # About me
@@ -66,6 +69,17 @@ socialLinks:
 # Projects
 
 - 阴阳师访问页：https://avenue-opposites-yys.netlify.app
+
+# My goal
+
+- 制作一个 Web 应用
+- 制作一个小程序
+- 制作一个移动端的软件
+- 制作一个 PC 端的软件
+
+# Idol
+
+{@antfu} {@yyx990803} {@sxzz} {@posva} {@HcySunYang}
 
 # Where to find me ?
 

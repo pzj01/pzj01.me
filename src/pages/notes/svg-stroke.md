@@ -2,7 +2,7 @@
 title: SVG之stroke属性
 description: 了解SVG的描边和线条相关属性
 duration: 10分钟
-date: 2024-4-08
+date: 2024-04-08
 tags: [SVG]
 ---
 

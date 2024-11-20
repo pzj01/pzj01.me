@@ -14,7 +14,7 @@ import './styles/main.css'
 
 import 'uno.css'
 
-export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) => {
+export const createApp = ViteSSG(App, { routes }, ({ router, isClient }) => {
   if (isClient) {
     setupRouterScroller(router, {
       selectors: {
@@ -37,6 +37,6 @@ export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) =>
       NProgress.done()
     })
 
-    provideAudio(app, '/audio/ASilentSummer.mp3')
+    // provideAudio(app, '/audio/ASilentSummer.mp3')
   }
 })

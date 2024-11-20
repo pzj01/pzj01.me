@@ -30,10 +30,18 @@ const router = useRouter()
 function back() {
   router.replace(router.currentRoute.value.matched[0].path)
 }
+
+let ArtComponent: Component
+
+if (window) {
+  ArtComponent = defineAsyncComponent(() => import('./art/PointArt.vue'))
+}
 </script>
 
 <template>
-  <PointArt />
+  <ClientOnly v-if="ArtComponent">
+    <component :is="ArtComponent" />
+  </ClientOnly>
   <div p-4 font-sans>
     <article class="mx-auto md:w-3/4 lg:w-1/2">
       <h1 :class="!isPost && 'mb-12 lg:mb-16'" text="3xl lg:4xl pretty" font-bold>

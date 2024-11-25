@@ -14,10 +14,15 @@ const routes = useRouter().getRoutes()
       <i i-ri-hashtag />
       {{ tag }}
     </h1>
-    <hr>
+    <hr my-4>
     <ul space-y-4>
-      <li v-for="{ path, meta: { frontmatter: { title, date, duration } = {} } } of routes" :key="path">
-        <Post :path :title :date :duration />
+      <li v-for="{ path, meta: { frontmatter } } of routes" :key="path">
+        <Post 
+          :path="path"
+          :title="frontmatter?.title"
+          :date="frontmatter?.date"
+          :duration="frontmatter?.duration"
+        />
       </li>
     </ul>
   </WrapperPost>

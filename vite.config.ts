@@ -21,6 +21,15 @@ import magicLink from 'markdown-it-magic-link'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 
+const isProse = (path: string) => {
+  const isPost = path.includes('/blog') || path.includes('/notes')
+  // 排除index.md
+  if (isPost) return !path.endsWith('index.md')
+
+  // 其他的包含index.md和use.md
+  return path.endsWith('index.md') || path.endsWith('use.md')
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -40,8 +49,8 @@ export default defineConfig({
 
         if (!path)
           return
-
-        if ((path.includes('/blog') || path.includes('/notes') || path.includes('/archive') || path.includes('/tags')) && path.endsWith('.md')) {
+        
+        if (path.endsWith('.md')) {
           const { data } = matter(readFileSync(path, 'utf-8'))
 
           route.addToMeta({
@@ -64,7 +73,7 @@ export default defineConfig({
 
     // https://github.com/unplugin/unplugin-vue-markdown
     Markdown({
-      wrapperClasses: path => path.endsWith('blog/index.md') || path.endsWith('notes/index.md') || path.endsWith('archive.md') || path.includes('/tags') ? '' : 'prose slide-enter-content',
+      wrapperClasses: path => isProse(path) ? 'prose slide-enter-content' : '',
       wrapperComponent: 'WrapperPost',
       headEnabled: true,
       async markdownItSetup(md) {

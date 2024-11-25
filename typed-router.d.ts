@@ -19,6 +19,7 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
     '/archive': RouteRecordInfo<'/archive', '/archive', Record<never, never>, Record<never, never>>,
     '/blog/': RouteRecordInfo<'/blog/', '/blog', Record<never, never>, Record<never, never>>,
     '/blog/css-border-image': RouteRecordInfo<'/blog/css-border-image', '/blog/css-border-image', Record<never, never>, Record<never, never>>,
@@ -68,8 +69,8 @@ declare module 'vue-router/auto-routes' {
     '/notes/svg-pattern-fiil-and-stroke': RouteRecordInfo<'/notes/svg-pattern-fiil-and-stroke', '/notes/svg-pattern-fiil-and-stroke', Record<never, never>, Record<never, never>>,
     '/notes/svg-stroke': RouteRecordInfo<'/notes/svg-stroke', '/notes/svg-stroke', Record<never, never>, Record<never, never>>,
     '/notes/svg-text-tag-and-property': RouteRecordInfo<'/notes/svg-text-tag-and-property', '/notes/svg-text-tag-and-property', Record<never, never>, Record<never, never>>,
-    '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
-    '/tags/[tag]': RouteRecordInfo<'/tags/[tag]', '/tags/:tag', { tag: ParamValue<true> }, { tag: ParamValue<false> }>,
+    '/tag/[tag]': RouteRecordInfo<'/tag/[tag]', '/tag/:tag', { tag: ParamValue<true> }, { tag: ParamValue<false> }>,
+    '/tags': RouteRecordInfo<'/tags', '/tags', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
   }
 }

@@ -1,5 +1,14 @@
+/* 文章样式表 */
 .prose {
   @apply mt-4 space-y-4;
+}
+
+.prose hr {
+  @apply my-2;
+}
+
+.prose summary {
+  @apply mb-2 font-bold;
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) {
@@ -128,11 +137,11 @@
   @apply my-0 space-y-none text-sm transition-opacity opacity-0 list-none;
 }
 
-.table-of-contents ul li > a {
+.prose .table-of-contents ul li > a {
   @apply hover:(text-black underline) dark:hover:text-white;
 }
 
-.table-of-contents:hover ul {
+.prose .table-of-contents:hover ul {
   @apply opacity-100;
 }
 
@@ -140,7 +149,7 @@
   @apply block;
 }
 
-.table-of-contents-anchor span {
+.prose .table-of-contents-anchor span {
   @apply i-ri-menu-2-fill cursor-pointer dark:hover:text-white hover:text-black transition-colors;
 }
 
@@ -156,15 +165,6 @@
 
 .markdown-alert > .markdown-alert-title + p {
   @apply mt-2 dark:text-white text-black leading-normal;
-}
-
-/* github 魔法链接 */
-.markdown-magic-link {
-  @apply pr-2 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 hover:bg-neutral/30 text;
-}
-
-.markdown-magic-link-image {
-  @apply bg-cover w-6 h-6 rounded-full inline-block;
 }
 
 .markdown-alert-note {

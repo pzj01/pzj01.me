@@ -17,14 +17,7 @@ body {
   @apply overflow-x-hidden;
 }
 
-hr {
-  @apply my-2;
-}
-
-summary {
-  @apply mb-2 font-bold;
-}
-
+/* 视图过渡 */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   @apply animate-none mix-blend-normal;
@@ -43,6 +36,7 @@ summary {
   @apply z-1;
 }
 
+/* 滚动条 */
 ::-webkit-scrollbar {
   @apply w-2 h-2;
 }
@@ -59,8 +53,18 @@ summary {
   @apply appearance-none;
 }
 
+/* 进度条 */
 #nprogress .bar {
   @apply bg-emerald;
+}
+
+/* github 魔法链接 */
+.markdown-magic-link {
+  @apply pr-2 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 hover:bg-neutral/30 text;
+}
+
+.markdown-magic-link-image {
+  @apply bg-cover w-6 h-6 rounded-full inline-block;
 }
 
 /* 如果用户没有减弱动画，添加入场动画>*/

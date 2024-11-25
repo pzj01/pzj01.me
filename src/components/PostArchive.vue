@@ -38,7 +38,7 @@ const postsYearEntries = Object.entries(postsYearRecord)
       <h1 text="2xl">
         {{ year }}
       </h1>
-      <hr>
+      <hr my-4>
       <ol space-y-4>
         <li v-for="{ title, path, date, duration }, i of posts" :key="path" slide-enter :style="`--enter-stage: ${i};--enter-step: 60ms;`">
           <Post :path :title :date :duration />

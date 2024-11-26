@@ -13,7 +13,7 @@
 <template>
   <nav p-2 sm:p-4 flex="~ justify-between">
     <RouterLink to="/">
-      pzj01.me
+      <Logo />
     </RouterLink>
     <span flex="~ gap-2 sm:gap-4 items-center">
       <HeaderLink to="/blog" icon="i-ri-blogger-line">Blog</HeaderLink>

@@ -23,15 +23,6 @@
   @apply opacity-100;
 }
 
-.prose p + :is(ol, ul) {
-  @apply ml-4;
-}
-
-.prose ul ol,
-.prose ol ul {
-  @apply ml-4 mt-4;
-}
-
 .prose :is(p, blockquote, ul, ol, li, em, s) {
   @apply text-neutral-500 text-pretty;
 }
@@ -110,22 +101,28 @@
   @apply border p-2;
 }
 
-/* 无序列表 */
-.prose ul {
-  @apply space-y-2 list-disc-inside;
+.prose :is(ol, ul) {
+  @apply ml-6 space-y-2;
 }
 
-.prose ul ul {
-  @apply ml-6 mt-4 list-circle-inside;
+/* 无序列表 */
+.prose ul {
+  @apply list-disc;
+}
+
+/* 无序列表子列表 */
+.prose ul > ul {
+  @apply list-circle;
 }
 
 /* 有序列表 */
 .prose ol {
-  @apply space-y-4 list-decimal-inside;
+  @apply list-decimal;
 }
 
-.prose ol ol {
-  @apply ml-6 mt-4 list-alpha-inside;
+/* 有序列表子列表 */
+.prose ol > ol {
+  @apply list-alpha;
 }
 
 /* TOC */

@@ -47,6 +47,7 @@ declare module 'vue-router/auto-routes' {
     '/blog/web-api-storage': RouteRecordInfo<'/blog/web-api-storage', '/blog/web-api-storage', Record<never, never>, Record<never, never>>,
     '/blog/web-api-worker': RouteRecordInfo<'/blog/web-api-worker', '/blog/web-api-worker', Record<never, never>, Record<never, never>>,
     '/notes/': RouteRecordInfo<'/notes/', '/notes', Record<never, never>, Record<never, never>>,
+    '/notes/basic-concepts-of-networking': RouteRecordInfo<'/notes/basic-concepts-of-networking', '/notes/basic-concepts-of-networking', Record<never, never>, Record<never, never>>,
     '/notes/cors': RouteRecordInfo<'/notes/cors', '/notes/cors', Record<never, never>, Record<never, never>>,
     '/notes/css-mask': RouteRecordInfo<'/notes/css-mask', '/notes/css-mask', Record<never, never>, Record<never, never>>,
     '/notes/learn-git': RouteRecordInfo<'/notes/learn-git', '/notes/learn-git', Record<never, never>, Record<never, never>>,

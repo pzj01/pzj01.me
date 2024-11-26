@@ -27,6 +27,7 @@ declare module 'vue' {
     GeolocationDemo: typeof import('./src/components/demo/GeolocationDemo.vue')['default']
     HeaderLink: typeof import('./src/components/HeaderLink.vue')['default']
     IntersectionObserver: typeof import('./src/components/demo/IntersectionObserver.vue')['default']
+    Logo: typeof import('./src/components/Logo.vue')['default']
     MutationObserver: typeof import('./src/components/demo/MutationObserver.vue')['default']
     PointArt: typeof import('./src/components/art/PointArt.vue')['default']
     Post: typeof import('./src/components/Post.vue')['default']

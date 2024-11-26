@@ -34,10 +34,16 @@ onMounted(() => {
 })
 
 function turn() {
-  timeline.tweenTo(timeline.nextLabel(), {
-    duration: 1,
-    ease: 'power2.inOut',
-  })
+  if (!timeline.paused()) {
+    timeline.pause()
+    timeline.tweenTo(timeline.nextLabel(), {
+      duration: 1,
+      ease: 'power2.inOut',
+      onComplete() {
+        timeline.resume()
+      },
+    })
+  }
 }
 </script>
 

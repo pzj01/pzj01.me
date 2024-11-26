@@ -39,6 +39,7 @@ function turn() {
     timeline.tweenTo(timeline.nextLabel(), {
       duration: 1,
       ease: 'power2.inOut',
+      overwrite: true,
       onComplete() {
         timeline.resume()
       },

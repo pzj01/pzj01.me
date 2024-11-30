@@ -20,6 +20,8 @@ const MAX_OFFSET = 60
 const gray = 255 * 0.451
 const SPORT_PERIOD = 8000 // ms
 const container = useTemplateRef('p5iContainer')
+// 记录已经绘制过的点，就可以不用重复创建已有位置的点
+const existingPoints = new Set<string>()
 const points: Point[] = []
 
 onMounted(() => {
@@ -59,7 +61,6 @@ onMounted(() => {
     },
     windowResized({ resizeCanvas, windowHeight, windowWidth }) {
       resizeCanvas(windowWidth, windowHeight)
-      points.length = 0
       addPoints()
     },
   }, container.value!)
@@ -68,6 +69,11 @@ onMounted(() => {
 function addPoints() {
   for (let x = -GAP / 2; x < innerWidth + GAP; x += GAP) {
     for (let y = -GAP / 2; y < innerHeight + GAP; y += GAP) {
+      const id = `${x}-${y}`
+      // 防止重复
+      if (existingPoints.has(id))
+        continue
+      existingPoints.add(id)
       points.push({
         x,
         y,

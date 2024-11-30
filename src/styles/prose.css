@@ -111,8 +111,8 @@
 }
 
 /* 无序列表子列表 */
-.prose ul > ul {
-  @apply list-circle;
+.prose ul ul {
+  @apply list-circle mt-2;
 }
 
 /* 有序列表 */
@@ -121,8 +121,8 @@
 }
 
 /* 有序列表子列表 */
-.prose ol > ol {
-  @apply list-alpha;
+.prose ol ol {
+  @apply list-alpha mt-2;
 }
 
 /* TOC */

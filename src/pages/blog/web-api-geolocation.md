@@ -68,6 +68,6 @@ if ('geolocation' in navigator) {
 }
 ```
 
-## 使用 Leftlet 在地图上显示当前的位置
+## 使用 Leatlet 在地图上显示当前的位置
 
 <LeafletMapDemo />

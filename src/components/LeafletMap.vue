@@ -9,7 +9,9 @@ let map: L.Map | null
 
 const center = computed<Coords>(() => [coords.value.latitude, coords.value.longitude])
 
-onMounted(() => {
+requestIdleCallback(initMap)
+
+function initMap() {
   map = L.map('map', {
     attributionControl: false,
   }).setView(center.value, 15)
@@ -23,7 +25,7 @@ onMounted(() => {
   // 添加当前位置标记
   const marker = L.marker(center.value).addTo(map)
   marker.bindPopup('这是你的位置').openPopup()
-})
+}
 
 onUnmounted(() => {
   map?.remove()

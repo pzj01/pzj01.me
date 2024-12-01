@@ -9,7 +9,7 @@ let map: L.Map | null
 
 const center = computed<Coords>(() => [coords.value.latitude, coords.value.longitude])
 
-requestIdleCallback(initMap)
+onMounted(() => setTimeout(initMap, 300))
 
 function initMap() {
   map = L.map('map', {
@@ -22,8 +22,15 @@ function initMap() {
     detectRetina: true,
   }).addTo(map)
 
+  const icon = L.icon({
+    iconUrl: '/images/marker.svg',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32],
+  })
+
   // 添加当前位置标记
-  const marker = L.marker(center.value).addTo(map)
+  const marker = L.marker(center.value, { icon }).addTo(map)
   marker.bindPopup('这是你的位置').openPopup()
 }
 

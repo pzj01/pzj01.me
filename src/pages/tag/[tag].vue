@@ -1,15 +1,14 @@
 <script setup lang="ts">
 const { params: { tag } } = useRoute()
-const routes = useRouter().getRoutes()
-  .filter((route) => {
-    const date = route.meta.frontmatter?.date
-    const tags: string[] = route.meta.frontmatter?.tags || []
-    return date && typeof date === 'string' && tags.length && tags.includes(tag as string)
-  })
+const routes = useRouter().getRoutes().filter((route) => {
+  const date = route.meta.frontmatter?.date
+  const tags: string[] = route.meta.frontmatter?.tags || []
+  return date && typeof date === 'string' && tags.length && tags.includes(tag as string)
+})
 </script>
 
 <template>
-  <WrapperPost>
+  <WrapperPost slide-enter-content>
     <h1 font-bold text-xl flex="~ items-center">
       <i i-ri-hashtag />
       {{ tag }}
@@ -17,7 +16,7 @@ const routes = useRouter().getRoutes()
     <hr my-4>
     <ul space-y-4>
       <li v-for="{ path, meta: { frontmatter } } of routes" :key="path">
-        <Post 
+        <Post
           :path="path"
           :title="frontmatter?.title"
           :date="frontmatter?.date"

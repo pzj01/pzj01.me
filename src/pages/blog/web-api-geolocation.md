@@ -67,3 +67,7 @@ if ('geolocation' in navigator) {
   navigator.geolocation.clearWatch(id)
 }
 ```
+
+## 使用 Leftlet 在地图上显示当前的位置
+
+<LeafletMapDemo />

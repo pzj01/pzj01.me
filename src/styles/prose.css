@@ -73,7 +73,7 @@
 }
 
 /* 链接 */
-.prose a:not(.markdown-magic-link) {
+.prose a:not(.markdown-magic-link, #map a) {
   @apply hover:underline mx-0.5 text-black dark:text-white;
 }
 

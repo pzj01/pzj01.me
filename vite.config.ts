@@ -21,10 +21,11 @@ import magicLink from 'markdown-it-magic-link'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 
-const isProse = (path: string) => {
+function isProse(path: string) {
   const isPost = path.includes('/blog') || path.includes('/notes')
   // 排除index.md
-  if (isPost) return !path.endsWith('index.md')
+  if (isPost)
+    return !path.endsWith('index.md')
 
   // 其他的包含index.md和use.md
   return path.endsWith('index.md') || path.endsWith('use.md')
@@ -49,7 +50,7 @@ export default defineConfig({
 
         if (!path)
           return
-        
+
         if (path.endsWith('.md')) {
           const { data } = matter(readFileSync(path, 'utf-8'))
 
@@ -142,7 +143,7 @@ export default defineConfig({
   ],
 
   ssr: {
-    noExternal: ['gsap'],
+    noExternal: ['gsap', 'p5i', 'leaflet'],
   },
   server: {
     // https: {

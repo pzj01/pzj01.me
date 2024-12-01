@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { P5I } from 'p5i'
 import type { Point as _Point } from '../../utils'
 import { p5i } from 'p5i'
 
@@ -23,9 +24,10 @@ const container = useTemplateRef('p5iContainer')
 // 记录已经绘制过的点，就可以不用重复创建已有位置的点
 const existingPoints = new Set<string>()
 const points: Point[] = []
+let _p5i: P5I
 
 onMounted(() => {
-  p5i({
+  _p5i = p5i({
     setup({ createCanvas, windowWidth, windowHeight, noFill, noiseSeed }) {
       createCanvas(windowWidth, windowHeight)
       noFill()
@@ -64,6 +66,12 @@ onMounted(() => {
       addPoints()
     },
   }, container.value!)
+})
+
+onUnmounted(() => {
+  points.length = 0
+  existingPoints.clear()
+  _p5i?.unmount()
 })
 
 function addPoints() {

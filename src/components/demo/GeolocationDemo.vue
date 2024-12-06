@@ -20,8 +20,9 @@ async function getGeolocation(latitude: number, longitude: number) {
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(async ({ coords: { latitude, longitude } }) => {
-      location.value = '获取中...'
-      console.log(latitude, longitude)
+      // location.value = '获取中...'
+      // console.log(latitude, longitude)
+      location.value = `latitude: ${latitude}, longitude: ${longitude}`
       // const address = await getGeolocation(latitude, longitude)
       // address && (location.value = address)
     }, (error: GeolocationPositionError) => {

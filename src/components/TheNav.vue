@@ -11,8 +11,8 @@
 </script>
 
 <template>
-  <nav p-2 sm:p-4 h-16 sm:h-20 flex="~ justify-end">
-    <RouterLink fixed left-2 sm:left-4 to="/">
+  <nav p-2 sm:p-4 h-16 sm:h-20 flex="~ justify-between md:justify-end">
+    <RouterLink md:(fixed left-4) to="/">
       <Logo />
     </RouterLink>
     <span flex="~ gap-2 sm:gap-4 items-center">

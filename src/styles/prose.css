@@ -115,6 +115,10 @@
   @apply list-circle mt-2;
 }
 
+.prose ul ol {
+  @apply list-alpha mt-2;
+}
+
 /* 有序列表 */
 .prose ol {
   @apply list-decimal;
@@ -125,6 +129,10 @@
   @apply list-alpha mt-2;
 }
 
+.prose ol ul {
+  @apply list-disc mt-2;
+}
+
 /* TOC */
 .prose .table-of-contents {
   @apply hidden fixed w-1/5 top-20 left-2 lg:block;
@@ -132,6 +140,14 @@
 
 .prose .table-of-contents ul {
   @apply my-0 space-y-none text-sm transition-opacity opacity-0 list-none;
+}
+
+.prose .table-of-contents > ul {
+  @apply ml-0 h-96 overflow-auto;
+}
+
+.prose .table-of-contents > ul::-webkit-scrollbar {
+  @apply w-1;
 }
 
 .prose .table-of-contents ul li > a {

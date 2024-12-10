@@ -1,25 +1,25 @@
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import Vue from '@vitejs/plugin-vue'
-import UnoCSS from 'unocss/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import { defineConfig } from 'vite'
-// unplugin
-import Components from 'unplugin-vue-components/vite'
-import Markdown from 'unplugin-vue-markdown/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import VueRouter from 'unplugin-vue-router/vite'
 // markdown-it
 import Shiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
+import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
 import anchor from 'markdown-it-anchor'
 import githubAlerts from 'markdown-it-github-alerts'
 import linkAttributes from 'markdown-it-link-attributes'
 import magicLink from 'markdown-it-magic-link'
-
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
+import UnoCSS from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+// unplugin
+import Components from 'unplugin-vue-components/vite'
+import Markdown from 'unplugin-vue-markdown/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+import VueRouter from 'unplugin-vue-router/vite'
+
+import { defineConfig } from 'vite'
 
 function isProse(path: string) {
   const isPost = path.includes('/blog') || path.includes('/notes')

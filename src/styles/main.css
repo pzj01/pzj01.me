@@ -60,7 +60,7 @@ body {
 
 /* github 魔法链接 */
 .markdown-magic-link {
-  @apply pr-2 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 hover:bg-neutral/30 text;
+  @apply font-mono pr-2 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 hover:bg-neutral/30 text;
 }
 
 .markdown-magic-link-image {

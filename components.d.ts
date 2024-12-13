@@ -10,6 +10,7 @@ declare module 'vue' {
     AccumulateDemo: typeof import('./src/components/demo/AccumulateDemo.vue')['default']
     AdditiveDemo: typeof import('./src/components/demo/AdditiveDemo.vue')['default']
     AnimateMotionDemo: typeof import('./src/components/demo/AnimateMotionDemo.vue')['default']
+    BackToTop: typeof import('./src/components/BackToTop.vue')['default']
     BezierCurveOneDemo: typeof import('./src/components/demo/BezierCurveOneDemo.vue')['default']
     CalcModeDemo: typeof import('./src/components/demo/CalcModeDemo.vue')['default']
     ClipboardDemo: typeof import('./src/components/demo/ClipboardDemo.vue')['default']

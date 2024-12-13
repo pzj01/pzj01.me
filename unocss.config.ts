@@ -27,10 +27,14 @@ export default defineConfig({
     presetWebFonts({
       provider: 'google',
       fonts: {
-        // 衬线字体
-        sans: 'Roboto:400,600,800',
         // 无衬线字体
-        serif: 'Cormorant Garamond:400,600',
+        sans: 'Geist:200,400,600,800',
+        // 跨语言字体
+        display: 'Noto:200,400,600,800',
+        // 衬线字体
+        serif: 'Cormorant Garamond:200,400,600,800',
+        // 等宽字体
+        mono: 'Geist Mono:200,400,600,800',
       },
     }),
   ],

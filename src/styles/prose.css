@@ -28,7 +28,7 @@
 }
 
 .prose :is(strong) {
-  @apply text-black dark:text-white;
+  @apply mx-0.5 text-black dark:text-white;
 }
 
 .prose :is(p, blockquote, ul, ol, li, strong, em, s)::selection {
@@ -94,6 +94,10 @@
 /* 表格 */
 .prose table {
   @apply w-full text-center border;
+}
+
+.prose table th {
+  @apply bg-neutral-100 dark:bg-neutral-800;
 }
 
 .prose table th,

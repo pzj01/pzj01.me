@@ -1,5 +1,8 @@
 .shiki {
   @apply transition-colors text-sm p-2 lg:(text-base p-4) rounded-lg overflow-auto;
+}
+
+.shiki > code {
   font-family: 'Input';
 }
 

@@ -114,7 +114,22 @@ export default defineConfig({
           .use(TOC, {
             containerHeaderHtml: '<div class="table-of-contents-anchor"><span /></div>',
           })
-          .use(magicLink)
+          .use(magicLink, {
+            linksMap: {
+              'Arc': 'https://arc.net',
+              'Chrome': 'https://www.google.com/chrome',
+              'VS Code': 'https://code.visualstudio.com',
+              'Vitesse Theme': 'https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse',
+              'Postman': 'https://www.postman.com',
+            },
+            imageOverrides: [
+              ['https://arc.net', '/images/arc.svg'],
+              ['https://www.google.com/chrome', 'https://api.iconify.design/logos:chrome.svg'],
+              ['https://code.visualstudio.com', 'https://api.iconify.design/logos:visual-studio-code.svg'],
+              ['https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse', '/images/vitesse.svg'],
+              ['https://www.postman.com', 'https://api.iconify.design/logos:postman-icon.svg'],
+            ],
+          })
       },
     }),
 

@@ -58,13 +58,28 @@ body {
   @apply bg-emerald;
 }
 
-/* github 魔法链接 */
+/* magic links author: @antfu */
 .markdown-magic-link {
-  @apply font-mono pr-2 v-bottom inline-flex items-center gap-x-1 lowercase rounded-full transition-colors duration-300 hover:bg-neutral/30 text;
+  @apply font-mono inline-flex items-center gap-x-1 transition-colors duration-300 hover:bg-neutral/30 text;
 }
 
+/* 链接图片 */
 .markdown-magic-link-image {
-  @apply bg-cover w-6 h-6 rounded-full inline-block;
+  @apply s-6 block bg-cover bg-no-repeat;
+}
+
+/* github @user */
+.markdown-magic-link-github-at {
+  @apply pr-2 lowercase rounded-full v-bottom;
+}
+
+.markdown-magic-link-github-at .markdown-magic-link-image {
+  @apply rounded-full;
+}
+
+/* link */
+.markdown-magic-link-link {
+  @apply px-1 py-px rounded v-bottom;
 }
 
 /* 如果用户没有减弱动画，添加入场动画>*/

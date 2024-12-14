@@ -35,6 +35,11 @@
   @apply bg-black dark:(bg-white text-black) text-white;
 }
 
+/* 键盘 */
+.prose kbd {
+  @apply mx-0.5 border border-black bg-neutral-200 text-black dark:(bg-neutral-800 text-white border-white) rounded py-0.5 px-1 font-mono;
+}
+
 /* 标题 */
 .prose h1 {
   @apply text-2xl mt-12! mb-6! lg:-ml-7;

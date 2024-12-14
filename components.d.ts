@@ -12,6 +12,7 @@ declare module 'vue' {
     AnimateMotionDemo: typeof import('./src/components/demo/AnimateMotionDemo.vue')['default']
     BackToTop: typeof import('./src/components/BackToTop.vue')['default']
     BezierCurveOneDemo: typeof import('./src/components/demo/BezierCurveOneDemo.vue')['default']
+    BFC: typeof import('./src/components/demo/BFC.vue')['default']
     CalcModeDemo: typeof import('./src/components/demo/CalcModeDemo.vue')['default']
     ClipboardDemo: typeof import('./src/components/demo/ClipboardDemo.vue')['default']
     DateFormat: typeof import('./src/components/DateFormat.vue')['default']

@@ -152,7 +152,7 @@
 }
 
 .prose .table-of-contents > ul {
-  @apply ml-0 h-96 overflow-auto;
+  @apply ml-0 h-96 overflow-y-auto overflow-x-hidden;
 }
 
 .prose .table-of-contents > ul::-webkit-scrollbar {

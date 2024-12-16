@@ -48,6 +48,24 @@ socialLinks:
   - provider: Twitter
     icon: i-ri-twitter-x-fill
     url: https://x.com/wojishidao
+  - provider: Discord
+    icon: i-ri-discord-fill
+    url: https://discord.com/users/pzj01
+  - provider: Twitch
+    icon: i-ri-twitch-fill
+    url: https://twitch.tv/pzj001
+  - provider: Instagram
+    icon: i-ri-instagram-fill
+    url: https://instagram.com/pzj01.me
+  - provider: YouTube
+    icon: i-ri-youtube-fill
+    url: https://youtube.com/@pzj01
+  - provider: reddit
+    icon: i-ri-reddit-fill
+    url: https://www.reddit.com/user/Zealousideal-Web5800
+  - provider: Facebook
+    icon: i-ri-facebook-fill
+    url: https://www.facebook.com/pzj01
   - provider: QQ：2949195453
     icon: i-ri-qq-fill
     url: https://user.qzone.qq.com/2949195453

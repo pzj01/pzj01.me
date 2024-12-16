@@ -84,11 +84,11 @@ body {
 
 /* 如果用户没有减弱动画，添加入场动画>*/
 @media (prefers-reduced-motion: no-preference) {
-  html:not(.no-sliding) [slide-enter],
-  html:not(.no-sliding) .slide-enter,
+  html *:not(.no-sliding, [no-sliding]) [slide-enter],
+  html *:not(.no-sliding, [no-sliding]) .slide-enter,
   /* 排除 table of contents>*/
-  html:not(.no-sliding) .slide-enter-content>*:not(:has(.table-of-contents)),
-  html:not(.no-sliding) [slide-enter-content]>*:not(:has(.table-of-contents)) {
+  html *:not(.no-sliding, [no-sliding]) .slide-enter-content>*:not(:has(.table-of-contents)),
+  html *:not(.no-sliding, [no-sliding]) [slide-enter-content]>*:not(:has(.table-of-contents)) {
     --enter-initial: 0ms;
     --enter-step: 90ms;
     --enter-stage: 0;

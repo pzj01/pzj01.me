@@ -68,12 +68,12 @@
 /* 段落 */
 .prose p {
   @apply tracking-widest leading-relaxed;
-  /* 行内代码 */
 }
 
+/* 行内代码 */
 .prose p code,
 .prose li code {
-  @apply before:content-['`'] after:content-['`'] font-bold text-black dark:text-white;
+  @apply before:content-['`'] after:content-['`'] font-bold text-black break-words dark:text-white;
   font-family: 'Input';
 }
 

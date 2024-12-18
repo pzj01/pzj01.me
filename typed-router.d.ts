@@ -24,6 +24,7 @@ declare module 'vue-router/auto-routes' {
     '/blog/': RouteRecordInfo<'/blog/', '/blog', Record<never, never>, Record<never, never>>,
     '/blog/buy-monitor-guide': RouteRecordInfo<'/blog/buy-monitor-guide', '/blog/buy-monitor-guide', Record<never, never>, Record<never, never>>,
     '/blog/css-border-image': RouteRecordInfo<'/blog/css-border-image', '/blog/css-border-image', Record<never, never>, Record<never, never>>,
+    '/blog/css-houdini-api': RouteRecordInfo<'/blog/css-houdini-api', '/blog/css-houdini-api', Record<never, never>, Record<never, never>>,
     '/blog/css-text-ellipsis': RouteRecordInfo<'/blog/css-text-ellipsis', '/blog/css-text-ellipsis', Record<never, never>, Record<never, never>>,
     '/blog/design-pattern-decorator': RouteRecordInfo<'/blog/design-pattern-decorator', '/blog/design-pattern-decorator', Record<never, never>, Record<never, never>>,
     '/blog/design-pattern-factory': RouteRecordInfo<'/blog/design-pattern-factory', '/blog/design-pattern-factory', Record<never, never>, Record<never, never>>,

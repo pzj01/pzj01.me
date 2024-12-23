@@ -73,6 +73,8 @@ declare module 'vue-router/auto-routes' {
     '/notes/svg-pattern-fiil-and-stroke': RouteRecordInfo<'/notes/svg-pattern-fiil-and-stroke', '/notes/svg-pattern-fiil-and-stroke', Record<never, never>, Record<never, never>>,
     '/notes/svg-stroke': RouteRecordInfo<'/notes/svg-stroke', '/notes/svg-stroke', Record<never, never>, Record<never, never>>,
     '/notes/svg-text-tag-and-property': RouteRecordInfo<'/notes/svg-text-tag-and-property', '/notes/svg-text-tag-and-property', Record<never, never>, Record<never, never>>,
+    '/six/': RouteRecordInfo<'/six/', '/six', Record<never, never>, Record<never, never>>,
+    '/six/2024-12-23': RouteRecordInfo<'/six/2024-12-23', '/six/2024-12-23', Record<never, never>, Record<never, never>>,
     '/tag/[tag]': RouteRecordInfo<'/tag/[tag]', '/tag/:tag', { tag: ParamValue<true> }, { tag: ParamValue<false> }>,
     '/tags': RouteRecordInfo<'/tags', '/tags', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,

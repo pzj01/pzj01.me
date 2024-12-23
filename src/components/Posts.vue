@@ -3,7 +3,7 @@ import type { Post } from '../types'
 import { compareDesc } from 'date-fns'
 
 const { type = 'blog' } = defineProps<{
-  type: 'blog' | 'notes'
+  type: 'blog' | 'notes' | 'six'
 }>()
 
 const router = useRouter()

@@ -25,7 +25,7 @@ if (window) {
 </script>
 
 <template>
-  <ClientOnly v-if="ArtComponent">
+  <ClientOnly v-if="!isPost && ArtComponent">
     <component :is="ArtComponent" />
   </ClientOnly>
   <div p-4 font-sans>

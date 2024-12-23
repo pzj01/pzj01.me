@@ -84,10 +84,7 @@ socialLinks:
 
 # My goal
 
-- 制作一个 Web 应用
-- 制作一个小程序（uniapp，taro）
-- 制作一个移动端的软件（react-native）
-- 制作一个 PC 端的软件（electron）
+- 完成和 Jack 叔叔的[六年之约](/six)。
 
 # Idol
 

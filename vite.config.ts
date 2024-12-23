@@ -1,3 +1,4 @@
+import type { ResolvedMagicLink } from 'markdown-it-magic-link'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 // markdown-it
@@ -8,7 +9,7 @@ import matter from 'gray-matter'
 import anchor from 'markdown-it-anchor'
 import githubAlerts from 'markdown-it-github-alerts'
 import linkAttributes from 'markdown-it-link-attributes'
-import magicLink from 'markdown-it-magic-link'
+import magicLink, { handlerGitHubAt, handlerLink } from 'markdown-it-magic-link'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import UnoCSS from 'unocss/vite'
@@ -22,7 +23,7 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 
 function isProse(path: string) {
-  const isPost = path.includes('/blog') || path.includes('/notes')
+  const isPost = path.includes('/blog') || path.includes('/notes') || path.includes('/six')
   // 排除index.md
   if (isPost)
     return !path.endsWith('index.md')
@@ -115,19 +116,37 @@ export default defineConfig({
             containerHeaderHtml: '<div class="table-of-contents-anchor"><span /></div>',
           })
           .use(magicLink, {
-            linksMap: {
-              'Arc': 'https://arc.net',
-              'Chrome': 'https://www.google.com/chrome',
-              'VS Code': 'https://code.visualstudio.com',
-              'Vitesse Theme': 'https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse',
-              'Postman': 'https://www.postman.com',
-            },
+            handlers: [
+              handlerLink({
+                linksMap: {
+                  'Arc': 'https://arc.net',
+                  'Chrome': 'https://www.google.com/chrome',
+                  'VS Code': 'https://code.visualstudio.com',
+                  'Vitesse Theme': 'https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse',
+                  'Postman': 'https://www.postman.com',
+                  'Jack要加油': 'https://www.douyin.com/user/MS4wLjABAAAAO-a9F9-OtKEJZjjL_CLIF-QrWBOcuGupqfH6jzu7_XW1w1bP5JVH-MMZ6ZqEjZ9v',
+                },
+              }),
+              handlerGitHubAt(),
+              {
+                name: 'at',
+                handler: () => false,
+                postprocess(parsed: ResolvedMagicLink) {
+                  if (parsed.text === 'JACK要加油') {
+                    parsed.link = 'https://www.douyin.com/user/MS4wLjABAAAAO-a9F9-OtKEJZjjL_CLIF-QrWBOcuGupqfH6jzu7_XW1w1bP5JVH-MMZ6ZqEjZ9v'
+                  }
+
+                  return parsed
+                },
+              },
+            ],
             imageOverrides: [
               ['https://arc.net', '/images/arc.svg'],
               ['https://www.google.com/chrome', 'https://api.iconify.design/logos:chrome.svg'],
               ['https://code.visualstudio.com', 'https://api.iconify.design/logos:visual-studio-code.svg'],
               ['https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse', '/images/vitesse.svg'],
               ['https://www.postman.com', 'https://api.iconify.design/logos:postman-icon.svg'],
+              ['https://www.douyin.com/user/MS4wLjABAAAAO-a9F9-OtKEJZjjL_CLIF-QrWBOcuGupqfH6jzu7_XW1w1bP5JVH-MMZ6ZqEjZ9v', 'https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-avt-0015_164195deb27c17684e03410368b314e3~c5_300x300.jpeg'],
             ],
           })
       },

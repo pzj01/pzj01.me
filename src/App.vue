@@ -12,18 +12,17 @@ onMounted(() => {
     if (target.tagName === 'IMG' && target instanceof HTMLImageElement) {
       image.src = target.src
       image.alt = target.alt
-      document.body.style.overflow = 'hidden'
-      isShowImg.value = true
-    }
-    else {
-      document.body.style.overflow = 'auto'
-      isShowImg.value = false
+      isShowImg.value = !isShowImg.value
+      document.body.style.overflow = isShowImg.value ? 'hidden' : 'auto'
     }
   })
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape')
+    // ESC 退出
+    if (e.key === 'Escape') {
       isShowImg.value = false
+      document.body.style.overflow = 'auto'
+    }
   })
 })
 </script>
@@ -36,7 +35,7 @@ onMounted(() => {
   <Teleport to="body">
     <Transition name="fade">
       <div v-if="isShowImg" z-10 fixed inset-0 backdrop-blur-lg flex="~ justify-center items-center">
-        <img object-cover md:h-full :src="image.src" :alt="image.alt">
+        <img object-contain w-full h-full max-w-screen max-h-screen :src="image.src" :alt="image.alt">
       </div>
     </Transition>
   </Teleport>

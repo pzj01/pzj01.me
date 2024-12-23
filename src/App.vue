@@ -36,7 +36,7 @@ onMounted(() => {
   <Teleport to="body">
     <Transition name="fade">
       <div v-if="isShowImg" z-10 fixed inset-0 backdrop-blur-lg flex="~ justify-center items-center">
-        <img object-cover h-full :src="image.src" :alt="image.alt">
+        <img object-cover md:h-full :src="image.src" :alt="image.alt">
       </div>
     </Transition>
   </Teleport>

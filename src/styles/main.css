@@ -65,7 +65,7 @@ body {
 
 /* 链接图片 */
 .markdown-magic-link-image {
-  @apply s-6 block bg-cover bg-no-repeat;
+  @apply s-6 block bg-contain bg-center bg-no-repeat;
 }
 
 /* github @user */

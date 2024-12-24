@@ -208,3 +208,16 @@
 .markdown-alert-warning {
   background-color: #9a670033;
 }
+
+.markdown-alert-preface {
+  @apply m-0;
+  font-family: cursive;
+}
+
+.markdown-alert-preface .markdown-alert-title + p {
+  @apply m-0;
+}
+
+.markdown-alert-preface .markdown-alert-title {
+  @apply hidden;
+}

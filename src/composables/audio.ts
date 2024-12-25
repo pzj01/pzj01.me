@@ -1,35 +1,39 @@
 import type { App } from 'vue'
 
+type UseMediaControlsOptions = Parameters<typeof useMediaControls>[1]
+
 const audioKey = Symbol('audio')
 const audioContextKey = Symbol('audioContext')
 
-export function provideAudio(app: App, src?: string) {
-  const audio = new Audio(src)
-  const audioContext = new AudioContext()
-
+export function provideAudio(app: App) {
+  const audio = new Audio()
   app.provide(audioKey, audio)
+}
+
+export function provideAudioContext(app: App) {
+  const audioContext = new AudioContext()
   app.provide(audioContextKey, audioContext)
 }
 
-export function useAudio() {
+export function useAudio(options?: UseMediaControlsOptions) {
   const audio = inject<HTMLAudioElement>(audioKey)
-  const context = inject<AudioContext>(audioContextKey)
 
   if (!audio) {
     throw new Error('audio is not provided')
   }
 
-  if (!context) {
-    throw new Error('audioContext is not provided')
-  }
-
-  const source = context.createMediaElementSource(audio)
-  const analyser = context.createAnalyser()
+  const controls = useMediaControls(audio, options)
 
   return {
     audio,
-    context,
-    source,
-    analyser,
+    ...controls,
+  }
+}
+
+export function useAudioContext() {
+  const context = inject<AudioContext>(audioContextKey)
+
+  if (!context) {
+    throw new Error('audioContext is not provided')
   }
 }

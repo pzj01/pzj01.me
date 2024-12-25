@@ -9,6 +9,10 @@ const { frontmatter } = defineProps<{
   frontmatter?: Frontmatter & Partial<Post>
 }>()
 
+const { audio } = useAudio()
+
+audio.src = `/audio/${frontmatter?.music}` || ''
+
 const isPost = computed(() => !!frontmatter?.date)
 
 const router = useRouter()

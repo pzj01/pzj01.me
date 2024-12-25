@@ -1,7 +1,7 @@
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
-import { routes } from 'vue-router/auto-routes'
 import { setupRouterScroller } from 'vue-router-better-scroller'
+import { routes } from 'vue-router/auto-routes'
 import App from './App.vue'
 // 进度条
 import 'nprogress/nprogress.css'
@@ -14,7 +14,7 @@ import './styles/main.css'
 
 import 'uno.css'
 
-export const createApp = ViteSSG(App, { routes }, ({ router, isClient }) => {
+export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) => {
   if (isClient) {
     setupRouterScroller(router, {
       selectors: {
@@ -37,6 +37,6 @@ export const createApp = ViteSSG(App, { routes }, ({ router, isClient }) => {
       NProgress.done()
     })
 
-    // provideAudio(app, '/audio/ASilentSummer.mp3')
+    provideAudio(app)
   }
 })

@@ -36,7 +36,7 @@ ECMAScript，即实现ECMA-262的语言（不止一门语言实现了它，比�
 - 操作符，比如：数学运算符和逻辑运算符。
 - 全局对象，比如：`window`、`console`等。
 
-### ECMAScript的历代版本以及其特性
+## ECMAScript的历代版本以及其特性
 
 <details>
     <summary>ECMAScript 1 (ES1) - 1997年6月发布</summary>
@@ -87,13 +87,18 @@ ECMAScript，即实现ECMA-262的语言（不止一门语言实现了它，比�
 - 类（class）：引入了类的概念，简化了面向对象编程。
 - 模块（import/export）：支持模块化编程，使代码更易维护。
 - 箭头函数（=>）：提供了一种更简洁的函数表达式，且有词法作用域的 this。
+- Set 和 Map，以及它们的弱引用版本：引入了新的数据结构，用于集合操作。
+- Fetch API：提供了一种更简单的 HTTP 请求方式。
+- 默认参数和剩余参数：提供了更灵活的参数传递方式。
 - 模板字符串（Template literals）：提供了多行字符串和内插变量的语法。
 - Promise：用于异步编程，解决回调地狱的问题。
-- 生成器（Generator）：允许创建可以暂停和恢复的函数。
+- 迭代器（Iterator）和生成器（Generator）：迭代器用于遍历对象和数组，生成器允许创建可以暂停和恢复的函数。
 - let 和 const：块级作用域的变量声明，避免了传统的 var 作用域问题。
 - 解构赋值：简化了对象和数组的赋值操作。
 - 增强对象字面量：简化了对象字面量的写法。
 - 代理和反射：Proxy 用于拦截对象的操作，Reflect定义了一组对象的基本操作方法，它们属于元编程的一部分。
+- 类型化数组（Typed Arrays）：支持更多的数据类型，如 Uint8Array、Int8Array 等。
+- 正则表达式：`RegExp.prototype.flags` 返回正则表达式的标志，粘性标志（y），Unicode标志（u），`\u{}` 语法，对 Unicode 的扩展支持。
 </details>
 
 <details>
@@ -120,18 +125,19 @@ ECMAScript，即实现ECMA-262的语言（不止一门语言实现了它，比�
 
 - 异步迭代（Async Iteration）：使得异步操作支持 `for-await-of` 循环。
 - 对象展开/剩余（Object spread/rest）：通过 `...` 操作符进行对象的展开和获取剩余参数。
-- 正则表达式改进：支持 s（dotAll）标志和 Unicode property escapes。
+- 正则表达式改进：添加了命名捕获组和后行断言，支持 s（dotAll）标志和 Unicode property escapes。
 - Promise.finally()：为 Promise 提供了 finally 方法，在处理完成后执行清理工作。
 </details>
 
 <details>
     <summary>ECMAScript 10 (ES10) / ECMAScript 2019 - 2019年6月发布</summary>
 
-- Array.prototype.flat() 和 Array.prototype.flatMap()：展平数组。
-- Object.fromEntries()：从键值对转换为对象。
-- String.prototype.trimStart() 和 String.prototype.trimEnd()：用于修剪字符串的开始和结束部分。
-- 符号（Symbol）增强：Symbol.prototype.description 获取符号的描述。
+- `Array.prototype.flat()` 和 `Array.prototype.flatMap`()：展平数组。
+- `Object.fromEntries()`：从键值对转换为对象。
+- `String.prototype.trimStart()` 和 `String.prototype.trimEnd()`：用于修剪字符串的开始和结束部分。
+- 符号（Symbol）增强：`Symbol.prototype.description` 获取符号的描述。
 - `Function.prototype.toString()`：返回函数的字符串表示函数的源代码。
+- 可选catch绑定（Optional catch binding）：允许在 catch 语句中绑定变量。
 - `Array.prototype.sort()`：固定了排序顺序。
 </details>
 
@@ -139,32 +145,61 @@ ECMAScript，即实现ECMA-262的语言（不止一门语言实现了它，比�
     <summary>ECMAScript 11 (ES11) / ECMAScript 2020 - 2020年6月发布</summary>
 
 - BigInt：提供了对大整数的支持，超过了 JavaScript 中 Number 类型的最大值。
+- 动态导入（Dynamic import）：允许动态加载模块。
+- 可选链（Optional chaining）：允许在链式调用中使用可选成员。
+- 空值合并（Nullish coalescing）：允许在表达式中使用 `??` 运算符。
 - `Promise.allSettled()`：允许获取多个 Promise 的执行结果，无论它们是成功还是失败。
 - `globalThis`：统一访问全局对象的方法。
+- `import.meta`：获取模块的元数据。
+- `String.prototype.matchAll()`：获取字符串中所有匹配的子字符串。
 - `for...in` 优化：避免获取继承的属性。
+- 模块导出命名（Named exports）：允许在模块中导出命名的成员。
 </details>
 
 <details>
     <summary>ECMAScript 12 (ES12) / ECMAScript 2021 - 2021年6月发布</summary>
 
-- 逻辑赋值运算符（Logical Assignment Operators）：简化了条件赋值操作，支持 &&=, ||=, ??=。
+- 逻辑赋值运算符（Logical Assignment Operators）：简化了条件赋值操作，支持 `&&=, ||=, ??=`。
+- 聚合错误（AggregateError）：用于将多个错误合并为一个错误。
 - 数字分隔符（Numeric Separators）：可以使用 _ 分隔数字，提高可读性。
 - `String.prototype.replaceAll()`：替换字符串中所有匹配的子字符串。
 - `Promise.any()`：类似于 Promise.race()，返回第一个成功的 Promise。
+- 弱引用（Weak Reference）：用于创建弱引用，可以在垃圾回收时清除不再使用的对象。
+- Internationalization API：提供了国际化的支持，包括日期和数字格式化。
+- FinalizationRegistry：可以在对象被垃圾回收时执行清理操作。
 </details>
 
 <details>
     <summary>ECMAScript 13 (ES13) / ECMAScript 2022 - 2022年6月发布</summary>
 
-- Top-level await：在模块的顶层支持 await，无需在函数内使用。
-- WeakRefs：弱引用，使得垃圾回收不受引用的影响。
+- `at()`方法：支持字符串、数组，支持负索引。
+- 类字段和私有字段：使用 `#` 修饰私有字段。
+- 顶层 await（Top-level await）：在模块的顶层支持 await，无需在函数内使用。
 - Error Cause：为错误对象添加 cause 属性，便于追踪错误的原因。
+- `Object.hasOwn()`：检查对象是否拥有某个属性。
+- 正则表达式支持 `d` 标志，提供索引位置。
 </details>
 
 <details>
     <summary>ECMAScript 14 (ES14) / ECMAScript 2023 - 2023年6月发布</summary>
 
-- 方法调用链（Method Call Chaining）：通过链式调用的简化。
-- 更完善的正则表达式支持。
-- 增强的数组和对象操作功能。
+- `findLast()` 和 `findLastIndex()`：在数组中查找最后一个匹配的元素和索引。
+- Hashbang：支持在脚本文件的开头添加 `#!` 作为注释，表示脚本使用特定的解释器。
+- 添加了一些不会修改源数组版本的方法：`toSorted()`，`toSpliced()`，`toReversed()`、`with()`。
+- Set方法增强：添加了`Set.prototype.difference()`、`Set.prototype.intersection()`、`Set.prototype.union()`、`Set.prototype.symmetricDifference()`、`Set.prototype.isDisjointFrom()`方法，用于处理集合的交集，差集，并集，对称差集。
+- 支持未注册的符号成为弱引用的key。
 </details>
+
+<details>
+    <summary>ECMAScript 15 (ES15) / ECMAScript 2024 - 2024年6月发布</summary>
+
+- `Object.groupBy()`：对对象的键进行分组，返回一个对象，键为分组后的键，值为分组后的值。
+- `Promise.withResolvers()`：创建一个 Promise 对象，同时返回 resolve 和 reject 函数。
+- 正则表达式支持 `v` 标志，使用 Unicode 属性集模式。
+</details>
+
+从历史版本来看，第6版带来的特性无疑是最多的，同时它还是JavaScript历史上最为重大的一个版本，在这个版本发布之后JavaScript才算是真正的踏入编程语言的行列了。
+
+## DOM
+
+DOM（Document Object Model），全称“文档对象模型”，它将页面上的内容抽象为一个个节点组成的一颗树。使用DOM API，JavaScript这样就可以通过更好的操作页面上的元素。

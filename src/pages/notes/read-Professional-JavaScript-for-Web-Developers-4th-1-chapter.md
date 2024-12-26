@@ -202,4 +202,22 @@ ECMAScript，即实现ECMA-262的语言（不止一门语言实现了它，比�
 
 ## DOM
 
-DOM（Document Object Model），全称“文档对象模型”，它将页面上的内容抽象为一个个节点组成的一颗树。使用DOM API，JavaScript这样就可以通过更好的操作页面上的元素。
+DOM（Document Object Model），全称“文档对象模型”，它将页面上的内容抽象为一个个节点组成的一颗树。使用DOM API，JavaScript就可以通过更好的操作页面上的元素。
+
+![DOM](/images/DOM.svg)
+
+DOM还有着级别，它们按照完善程度来分为以下几个层次：
+- DOM Level 0
+  - 这不是一个正式的标准版本，而是指早期浏览器中实现的基本功能。它通常指的是浏览器提供的基本 JavaScript 对象模型，能够进行简单的文档操作。
+  - 早期的浏览器（如 Netscape Navigator 和 Internet Explorer）支持了一些 JavaScript 对象来操作页面内容（如 document.getElementById()，document.createElement() 等），但是没有明确的标准或统一的 API。
+- DOM Level 1
+  - 1998年10月发布的，这是第一个正式的 DOM 标准，它由两个模块组成：DOM Core 和 DOM HTML。
+  - 前者是 DOM 的基础，提供了对文档树的通用操作接口，适用于 HTML 和 XML 等所有类型的文档。
+  - 后者则是扩展了 DOM Core，专门为 HTML 文档设计，提供了对  HTML 的对象和方法。
+- DOM Level 2
+  - 2000年发布，新增了以下模块：
+    - DOM View：提供了对窗口和文档的操作。
+    - DOM Events：提供了对事件的对象和方法。
+    - DOM Style：提供了对 CSS 的对象和方法。
+    - DOM Range and Traversal：提供了对文档树的遍历操作。
+- DOM Level 3

@@ -34,7 +34,7 @@ onMounted(() => {
   </div>
   <Teleport to="body">
     <Transition name="fade">
-      <div v-if="isShowImg" z-10 fixed inset-0 backdrop-blur-lg flex="~ justify-center items-center">
+      <div v-show="isShowImg" z-10 fixed inset-0 backdrop-blur flex="~ justify-center items-center">
         <img object-contain w-full h-full max-w-screen max-h-screen :src="image.src" :alt="image.alt">
       </div>
     </Transition>
@@ -44,18 +44,16 @@ onMounted(() => {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: opacity 300ms ease-in-out;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: scale(0);
 }
 
 .fade-enter-to,
 .fade-leave-from {
   opacity: 1;
-  transform: scale(1);
 }
 </style>

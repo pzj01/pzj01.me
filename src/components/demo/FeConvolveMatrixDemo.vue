@@ -6,10 +6,10 @@ const form = reactive({
   kernelMatrix: '1 0 0 0 1 0 0 0 1',
   divisor: 1,
   bias: 0,
-  targetX: 1.5,
-  targetY: 1.5,
+  targetX: 1,
+  targetY: 1,
   edgeMode: 'duplicate',
-  preserveAlpha: false,
+  preserveAlpha: 'false',
 })
 
 const targetX = computed(() => (form.targetX >= 0 && form.targetX <= form.row) ? form.targetX : form.row / 2)
@@ -28,7 +28,7 @@ const order = computed(() => form.enableDouble ? `${form.row} ${form.column}` : 
         :targetX
         :targetY
         :edgeMode="form.edgeMode"
-        :preserveAlpha="Number(form.preserveAlpha)"
+        :preserveAlpha="form.preserveAlpha"
       />
     </filter>
     <image

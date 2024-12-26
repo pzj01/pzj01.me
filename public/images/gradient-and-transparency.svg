@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="169.698mm" height="202.228mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 16955.51 20205.8"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#F6BBBB;stroke-width:19.98;stroke-miterlimit:22.9256}
+    .str4 {stroke:#F6AF46;stroke-width:19.98;stroke-miterlimit:22.9256}
+    .str0 {stroke:#E94834;stroke-width:19.98;stroke-miterlimit:22.9256}
+    .str3 {stroke:#B4D239;stroke-width:19.98;stroke-miterlimit:22.9256}
+    .str2 {stroke:#8A7DB9;stroke-width:19.98;stroke-miterlimit:22.9256}
+    .str5 {stroke:#00A6EA;stroke-width:19.98;stroke-miterlimit:22.9256}
+    .fil2 {fill:none}
+    .fil13 {fill:none}
+    .fil4 {fill:#F6BBBB}
+    .fil10 {fill:#F6AF46}
+    .fil1 {fill:#E94834}
+    .fil8 {fill:#B4D239}
+    .fil6 {fill:#8A7DB9}
+    .fil12 {fill:#00AFEC}
+    .fil3 {fill:url(#id0)}
+    .fil0 {fill:url(#id1)}
+    .fil5 {fill:url(#id2)}
+    .fil9 {fill:url(#id3);fill-opacity:0.901961}
+    .fil7 {fill:url(#id4);fill-opacity:0.901961}
+    .fil11 {fill:url(#id5);fill-opacity:0.901961}
+   ]]>
+  </style>
+  <radialGradient id="id0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.01986 -3.35939E-001 0.500571 1.51966 -2729 -2200)" cx="1776" cy="5381.13" r="3159.49" fx="1776" fy="5381.13">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#F5B4B4"/>
+  </radialGradient>
+  <radialGradient id="id1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.00592 0.0267902 -3.99193E-002 1.49889 36 -1166)" cx="7096.82" cy="1955.4" r="3371.38" fx="7096.82" fy="1955.4">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#E6232A"/>
+  </radialGradient>
+  <radialGradient id="id2" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.962007 0.488607 -7.28058E-001 1.43345 3984 -9059)" cx="14350.15" cy="4723.02" r="3144.22" fx="14350.15" fy="4723.02">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#7D70B0"/>
+  </radialGradient>
+  <radialGradient id="id3" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.993892 0.23265 -3.46664E-001 1.48096 2349 -5448)" cx="9760.42" cy="6605.03" r="3323.56" fx="9760.42" fy="6605.03">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#F6AF46"/>
+  </radialGradient>
+  <radialGradient id="id4" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.00667 -0 -0 1.5 -44 -3174)" cx="6603.73" cy="6347.08" r="3370.08" fx="6603.73" fy="6347.08">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#ADCE24"/>
+  </radialGradient>
+  <radialGradient id="id5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.01254 -4.23733E-001 0.63139 1.50875 -4908 -3367)" cx="1354.07" cy="7746.34" r="3090.8" fx="1354.07" fy="7746.34">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#00A3E9"/>
+  </radialGradient>
+ </defs>
+ <g id="圖層_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="球球">
+   <g id="气球">
+    <path class="fil0" d="M7813.45 0.56c1182.69,31.49 2220.44,1315.18 2178.74,2880.85 -41.69,1565.65 -1680.98,3860.82 -2189.55,3861.34 -508.58,0.52 -2376.17,-2331.79 -2334.48,-3897.44 41.69,-1565.66 1162.6,-2876.23 2345.29,-2844.74z"/>
+    <path class="fil1" d="M7450.23 6963.53c20.46,-63.09 358.65,-407.53 598.03,-86.78 222.05,297.52 -39.73,66.55 -268.6,58.57 -228.88,-7.98 -378.57,111.39 -329.42,28.21z"/>
+    <line class="fil2 str0" x1="7779.65" y1="6935.32" x2="7426.52" y2= "20194.77" />
+   </g>
+   <g id="气球_1">
+    <path class="fil3" d="M1812.79 3339.2c1123.72,-370.15 2534.31,487.18 3024.32,1974.77 490.01,1487.58 -276.93,4201.78 -755.4,4374.18 -478.46,172.41 -3024.52,-1391.29 -3514.53,-2878.88 -490.01,-1487.59 121.89,-3099.93 1245.6,-3470.07z"/>
+    <path class="fil4" d="M3824.68 10015.07c-2.07,-66.29 199.78,-504.78 533.48,-283.83 309.56,204.95 -14.88,76.07 -232.98,145.93 -218.1,69.85 -318.63,232.8 -300.5,137.9z"/>
+    <line class="fil2 str1" x1="4125.17" y1="9877.17" x2="7504.25" y2= "20135.58" />
+   </g>
+   <g id="气球_2">
+    <path class="fil5" d="M15862.82 3267.75c1054.84,535.76 1441.65,2140.49 732.4,3536.91 -709.25,1396.43 -3174.56,2766.56 -3634.2,2548.88 -459.64,-217.69 -1146.27,-3125.63 -437.01,-4522.05 709.24,-1396.43 2283.96,-2099.5 3338.8,-1563.74z"/>
+    <path class="fil6" d="M12547.98 9401.81c45.54,-48.21 498.78,-214.29 577.43,178.13 72.97,364 -64.44,43.08 -267.76,-62.31 -203.33,-105.38 -389.76,-61.77 -309.68,-115.82z"/>
+    <line class="fil2 str2" x1="12857.66" y1="9517.63" x2="7455.61" y2= "20153.58" />
+   </g>
+   <g id="气球_3">
+    <path class="fil7" d="M7289.26 4392.43c1183.11,0 2254.67,1255.6 2254.67,2821.82 0,1566.21 -1577.59,3904.21 -2085.98,3918.27 -508.38,14.06 -2437.41,-2267.7 -2437.41,-3833.92 0,-1566.21 1085.62,-2906.17 2268.72,-2906.17z"/>
+    <path class="fil8" d="M7111.54 11362.6c18.77,-63.61 347.67,-416.93 595.5,-102.67 229.9,291.51 -37.94,67.59 -266.95,65.7 -229.01,-1.89 -375.47,121.43 -328.55,36.97z"/>
+    <line class="fil2 str3" x1="7440.1" y1="11325.63" x2="7440.1" y2= "20123.25" />
+   </g>
+   <g id="橙气球">
+    <path class="fil9" d="M10862.2 4852.36c1151.96,269.64 1909.15,1736.43 1552.18,3261.43 -356.97,1524.99 -2425.92,3441.89 -2924.12,3339.7 -498.21,-102.18 -1856.41,-2763.56 -1499.44,-4288.55 356.97,-1524.99 1719.42,-2582.24 2871.39,-2312.59z"/>
+    <path class="fil10" d="M9100.52 11598.57c32.77,-57.65 433.55,-326.72 603.22,35.75 157.41,336.23 -52.35,57.17 -274.89,3.14 -222.55,-54.03 -393.27,32.65 -328.33,-38.89z"/>
+    <line class="fil2 str4" x1="9428.86" y1="11637.46" x2="7423.71" y2= "20203.52" />
+   </g>
+   <g id="蓝气球">
+    <path class="fil11" d="M1234.16 5672.53c1091.39,-456.74 2564.6,287.87 3169.24,1732.66 604.62,1444.81 51.9,4210.58 -411.64,4419.81 -463.55,209.22 -3123.9,-1150.96 -3728.54,-2595.76 -604.62,-1444.81 -120.45,-3099.99 970.94,-3556.71z"/>
+    <path class="fil12" d="M3761.02 12170.98c-7.23,-65.92 159.77,-518.82 509.7,-324.61 324.61,180.16 -8.9,77.01 -220.88,163.66 -211.99,86.67 -299.5,256.97 -288.82,160.94z"/>
+    <line class="fil13 str5" x1="4049.84" y1="12010.04" x2="7446.11" y2= "20125.67" />
+   </g>
+  </g>
+ </g>
+</svg>

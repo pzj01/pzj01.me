@@ -82,6 +82,7 @@ declare module 'vue-router/auto-routes' {
     '/six/2024-12-27': RouteRecordInfo<'/six/2024-12-27', '/six/2024-12-27', Record<never, never>, Record<never, never>>,
     '/six/2024-12-31': RouteRecordInfo<'/six/2024-12-31', '/six/2024-12-31', Record<never, never>, Record<never, never>>,
     '/six/2025-01-11': RouteRecordInfo<'/six/2025-01-11', '/six/2025-01-11', Record<never, never>, Record<never, never>>,
+    '/six/2025-02-10': RouteRecordInfo<'/six/2025-02-10', '/six/2025-02-10', Record<never, never>, Record<never, never>>,
     '/tag/[tag]': RouteRecordInfo<'/tag/[tag]', '/tag/:tag', { tag: ParamValue<true> }, { tag: ParamValue<false> }>,
     '/tags': RouteRecordInfo<'/tags', '/tags', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,

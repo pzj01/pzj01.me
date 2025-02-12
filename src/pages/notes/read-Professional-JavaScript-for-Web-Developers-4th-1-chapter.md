@@ -221,3 +221,5 @@ DOM还有着级别，它们按照完善程度来分为以下几个层次：
     - DOM Style：提供了对 CSS 的对象和方法。
     - DOM Range and Traversal：提供了对文档树的遍历操作。
 - DOM Level 3
+  - 2004年发布，新增了以下模块：
+    - DOM Storage：提供了对本地存储的操作。

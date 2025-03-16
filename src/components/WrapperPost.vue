@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { Frontmatter } from 'unplugin-vue-markdown/types'
+import type { Component } from 'vue'
 import type { Post } from '../types'
+import { useHead } from '@unhead/vue'
 import '~/styles/prose.css'
 import '~/styles/shiki.css'
 import '~/styles/rich.css'
@@ -16,6 +18,11 @@ audio.src = `/audio/${frontmatter?.music}` || ''
 const isPost = computed(() => !!frontmatter?.date)
 
 const router = useRouter()
+
+useHead({
+  title: frontmatter?.title,
+  titleTemplate: `%s${router.currentRoute.value.path === '/' ? '' : ' | Peng Zhao jun'}`,
+})
 
 function back() {
   router.replace(router.currentRoute.value.matched[0].path)

@@ -8,8 +8,8 @@ import MarkdownIt from 'markdown-it'
 
 const DOMAIN = 'https://pzj01.netlify.app'
 const AUTHOR = {
-  name: 'pzj',
-  email: '2949195453@qq.com',
+  name: 'Peng Zhao jun',
+  email: 'pzj01.me@gmail.com',
   link: 'https://pzj01.netlify.app',
 }
 const md = MarkdownIt({
@@ -65,7 +65,7 @@ async function readPost(path: string) {
     date: data.date,
     category: data.tags,
     author: [AUTHOR],
-    copyright: 'Copyright (c) 2024 pzj',
+    copyright: 'Copyright (c) 2025 Peng Zhao jun',
     id: `${DOMAIN}${route}`,
     link: `${DOMAIN}${route}`,
     content: html,

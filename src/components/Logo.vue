@@ -13,7 +13,7 @@ const timeline = gsap.timeline({
     ease: 'power2.inOut',
   },
 })
-const postions = [
+const positions = [
   { x: 0.3, y: 0.3 }, // 左上
   { x: 0.7, y: 0.3 }, // 右上
   { x: 0.7, y: 0.7 }, // 右下
@@ -22,7 +22,7 @@ const postions = [
 ]
 
 onMounted(() => {
-  postions.forEach((p, i) => {
+  positions.forEach((p, i) => {
     timeline.to('#r', {
       duration: gsap.utils.random(1, 2, 0.1),
       attr: {

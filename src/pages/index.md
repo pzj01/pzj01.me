@@ -57,15 +57,9 @@ socialLinks:
   - provider: YouTube
     icon: i-ri-youtube-fill
     url: https://youtube.com/@pzj01
-  - provider: reddit
+  - provider: Reddit
     icon: i-ri-reddit-fill
     url: https://www.reddit.com/user/Zealousideal-Web5800
-  - provider: QQ：2949195453
-    icon: i-ri-qq-fill
-    url: https://user.qzone.qq.com/2949195453
-  - provider: WeChat：yys2949195453
-    icon: i-ri-wechat-fill
-    url: https://weixin.qq.com
 ---
 
 # About me

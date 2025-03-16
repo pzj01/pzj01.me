@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@9.14.4",
-  "author": "pzj01 <2949195453@qq.com>",
+  "author": "pzj01 <pzj01.me@gmail.com>",
   "scripts": {
     "rss": "esno ./scripts/rss.ts",
     "dev": "vite --host --port 3333",
@@ -13,8 +13,6 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@types/leaflet": "^1.9.14",
-    "@types/spark-md5": "^3.0.5",
     "@vueuse/core": "^12.0.0",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.2",
@@ -36,10 +34,12 @@
     "@iconify-json/simple-icons": "^1.2.13",
     "@shikijs/markdown-it": "^1.24.0",
     "@shikijs/twoslash": "^1.24.0",
+    "@types/leaflet": "^1.9.14",
     "@types/markdown-it": "^14.1.2",
     "@types/markdown-it-link-attributes": "^3.0.5",
     "@types/node": "^20.17.9",
     "@types/nprogress": "^0.2.3",
+    "@types/spark-md5": "^3.0.5",
     "@unhead/vue": "^1.11.13",
     "@unocss/reset": "^0.64.1",
     "@vitejs/plugin-vue": "^5.2.1",

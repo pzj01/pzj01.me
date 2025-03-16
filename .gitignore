@@ -1,6 +1,10 @@
 # Temp
 .examples
 
+*.bkp
+
+todo.md
+
 # Logs
 logs
 *.log

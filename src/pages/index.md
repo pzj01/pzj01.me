@@ -86,6 +86,10 @@ socialLinks:
 - {@sxzz} {@posva}
 - {@HcySunYang}
 
+# Wish list
+
+- 自己组装一台台式电脑 🖥️
+
 # Where to find me ?
 
 <SocialLinks :links="frontmatter.socialLinks" />

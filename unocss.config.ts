@@ -3,9 +3,9 @@ import { defineConfig } from 'unocss/vite'
 
 export default defineConfig({
   shortcuts: [
-    ['text', 'text-neutral-500 hover:text-black dark:hover:text-white transition-colors'],
-    ['link', 'text-neutral dark:text-neutral transition-colors underline-offset-2 hover:(underline text-black) dark:hover:text-white'],
-    ['svg', 'mx-auto w-1/2 border border-neutral'],
+    ['text', 'text-zinc-700 dark:text-zinc hover:text-black dark:hover:text-white transition-colors'],
+    ['link', 'text-zinc transition-colors underline-offset-2 hover:(underline text-black) dark:hover:text-white'],
+    ['svg', 'mx-auto w-1/2 border border-zinc'],
     ['flex-center', 'flex justify-center items-center'],
     ['btn', 'flex items-center border p-2 rounded text'],
   ],

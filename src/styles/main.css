@@ -60,7 +60,7 @@ body {
 
 /* magic links author: @antfu */
 .markdown-magic-link {
-  @apply font-mono inline-flex items-center gap-x-1 transition-colors duration-300 hover:bg-neutral/30 text;
+  @apply font-mono inline-flex items-center gap-x-1 transition-colors duration-300 hover:bg-zinc/30 text;
 }
 
 /* 链接图片 */

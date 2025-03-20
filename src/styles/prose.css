@@ -24,7 +24,7 @@
 }
 
 .prose :is(p, blockquote, ul, ol, li, em, s) {
-  @apply text-neutral-500 text-pretty;
+  @apply text-zinc-700 dark:text-zinc text-pretty;
 }
 
 .prose :is(strong) {
@@ -37,7 +37,7 @@
 
 /* 键盘 */
 .prose kbd {
-  @apply mx-0.5 border border-black bg-neutral-200 text-black dark:(bg-neutral-800 text-white border-white) rounded py-0.5 px-1 font-mono;
+  @apply mx-0.5 border border-black bg-zinc-200 text-black dark:(bg-zinc-800 text-white border-white) rounded py-0.5 px-1 font-mono;
 }
 
 /* 标题 */
@@ -89,11 +89,11 @@
 
 /* 引文 */
 .prose blockquote {
-  @apply space-y-4 inline-block bg-neutral/20 border-l-4 border-neutral-500 pl-4 pr-2 py-2;
+  @apply space-y-4 inline-block bg-zinc/20 border-l-4 border-zinc pl-4 pr-2 py-2;
 }
 
 .prose blockquote p {
-  @apply text-stone;
+  @apply text-zinc;
 }
 
 /* 表格 */
@@ -102,7 +102,7 @@
 }
 
 .prose table th {
-  @apply bg-neutral-100 dark:bg-neutral-800;
+  @apply bg-zinc-100 dark:bg-zinc-800;
 }
 
 .prose table th,

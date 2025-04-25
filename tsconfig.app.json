@@ -34,5 +34,5 @@
     "components.d.ts",
     "shims.d.ts",
     "src/a.js"
-  ]
+, "transformer.ts"  ]
 }

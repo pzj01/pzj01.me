@@ -36,4 +36,6 @@ export function useAudioContext() {
   if (!context) {
     throw new Error('audioContext is not provided')
   }
+
+  return context
 }

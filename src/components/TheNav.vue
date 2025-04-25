@@ -2,6 +2,8 @@
 const { audio, playing, buffered } = useAudio()
 
 onMounted(() => {
+  if (!buffered.value.length)
+    return
   audio.autoplay = true
   audio.loop = true
   playing.value = true

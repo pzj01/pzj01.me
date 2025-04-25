@@ -1,21 +1,43 @@
 .shiki {
-  @apply transition-colors text-sm p-2 lg:(text-base p-4) rounded-lg overflow-auto;
+  @apply text-sm p-2 lg:(text-base p-4) rounded-lg overflow-auto;
 }
 
 .shiki > code {
   font-family: 'Input';
 }
 
+.shiki,
 .shiki span {
-  @apply transition-colors;
+  color: var(--shiki);
+  background-color: var(--shiki-bg);
 }
 
 .dark .shiki,
 .dark .shiki span {
-  color: var(--shiki-dark) !important;
-  background-color: var(--shiki-dark-bg) !important;
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
 }
 
 .twoslash .twoslash-error {
   padding-bottom: 3px !important;
+}
+
+.shiki-container .language-symbol {
+  @apply font-mono transition-opacity absolute top-0.5 right-1.5 lg:(top-1 text-xs) text-[10px] text-gray dark:text-gray-500;
+}
+
+.shiki-container .copy-button {
+  @apply absolute s-5 lg:s-6 right-2 top-2 text-xs opacity-0 transition-opacity;
+}
+
+.shiki-container:hover .copy-button {
+  @apply opacity-100;
+}
+
+.shiki-container:hover .copy-button + .language-symbol {
+  @apply opacity-0;
+}
+
+.shiki-container .copy-button .copy-icon {
+  @apply w-full h-full fill-gray;
 }

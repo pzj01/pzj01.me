@@ -7,6 +7,7 @@ import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
 import anchor from 'markdown-it-anchor'
+// @ts-expect-error missing default declaration
 import githubAlerts from 'markdown-it-github-alerts'
 import linkAttributes from 'markdown-it-link-attributes'
 import magicLink, { handlerGitHubAt, handlerLink } from 'markdown-it-magic-link'
@@ -18,9 +19,10 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
-import VueRouter from 'unplugin-vue-router/vite'
 
+import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
+import transformerPzj01 from './transformer'
 
 function isProse(path: string) {
   const isPost = path.includes('/blog') || path.includes('/notes') || path.includes('/six')
@@ -90,9 +92,10 @@ export default defineConfig({
               explicitTrigger: true,
               renderer: rendererRich(),
             }),
+            transformerPzj01(),
           ],
         }))
-        // 锚点
+          // 锚点
           .use(anchor, {
             level: [1, 2, 3, 4],
             slugify: slug => decodeURIComponent(slug),
@@ -103,7 +106,7 @@ export default defineConfig({
               placement: 'before',
             }),
           })
-        // 链接属性
+          // 链接属性
           .use(linkAttributes, {
             matcher: (href: string) => href.startsWith('http'),
             attrs: {

@@ -33,6 +33,15 @@ let ArtComponent: Component
 if (window) {
   ArtComponent = defineAsyncComponent(() => import('./art/PointArt.vue'))
 }
+
+onMounted(() => {
+  const btns = document.querySelectorAll('.copy-button')
+  btns.forEach(btn => {
+    useEventListener(btn, 'click', () => {
+      navigator.clipboard.writeText(btn.getAttribute('data-clipboard-text')!)
+    })
+  })
+})
 </script>
 
 <template>

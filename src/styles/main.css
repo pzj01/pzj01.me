@@ -46,7 +46,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-neutral-2 dark:bg-neutral-9 transition-colors;
+  @apply rounded-lg bg-neutral-2 dark:bg-neutral-9;
 }
 
 ::-webkit-scrollbar-corner {

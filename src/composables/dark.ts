@@ -11,13 +11,13 @@ export function toggleDark(event: MouseEvent) {
     return
   }
 
-  const x = event.clientX
-  const y = event.clientY
+  const x = event.clientX * devicePixelRatio
+  const y = event.clientY * devicePixelRatio
   const endRadius = Math.hypot(
     Math.max(x, innerWidth - x),
     Math.max(y, innerHeight - y),
   )
-  // @ts-expect-error Transition API
+
   const transition = document.startViewTransition(async () => {
     isDark.value = !isDark.value
     await nextTick()

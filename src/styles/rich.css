@@ -26,6 +26,10 @@
   --twoslash-tag-annotate-bg: #1ba67320;
 }
 
+.dark:root {
+  --twoslash-popup-bg: #191919;
+}
+
 /* Respect people's wishes to not have animations */
 @media (prefers-reduced-motion: reduce) {
   .twoslash * {

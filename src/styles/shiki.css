@@ -6,6 +6,15 @@
   font-family: 'Input';
 }
 
+.shiki > code[class|="language"]::before,
+.shiki > code[class|="language"]::after {
+  content: none;
+}
+
+li > .shiki-container {
+  @apply my-2;
+}
+
 .shiki,
 .shiki span {
   color: var(--shiki);
@@ -14,9 +23,27 @@
 
 .dark .shiki,
 .dark .shiki span {
-  color: var(--shiki-dark);
+  color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg);
 }
+
+.twoslash .shiki {
+  @apply p-0;
+}
+
+.twoslash-hover .shiki,
+.twoslash-hover .shiki span,
+.twoslash-popup-container,
+.twoslash-popup-code span {
+  background-color: var(--twoslash-popup-bg) !important;
+}
+
+/* .dark .twoslash-hover .shiki,
+.dark .twoslash-hover .shiki span,
+.dark .twoslash-popup-container,
+.dark .twoslash-popup-code span {
+  background-color: #191919 !important;
+} */
 
 .twoslash .twoslash-error {
   padding-bottom: 3px !important;

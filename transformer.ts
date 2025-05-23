@@ -2,7 +2,6 @@ import type { Element, ElementContent } from 'hast'
 import type { ShikiTransformer } from 'shiki'
 
 export default function transformerPzj01(): ShikiTransformer {
-
   const icon: Element = {
     type: 'element',
     tagName: 'svg',

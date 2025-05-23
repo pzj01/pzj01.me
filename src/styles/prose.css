@@ -72,7 +72,8 @@
 
 /* 行内代码 */
 .prose p code,
-.prose li code {
+.prose li code,
+.markdown-alert code {
   @apply before:content-['`'] after:content-['`'] font-bold text-black break-words dark:text-white;
   font-family: 'Input';
 }

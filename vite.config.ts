@@ -90,7 +90,9 @@ export default defineConfig({
           transformers: [
             transformerTwoslash({
               explicitTrigger: true,
-              renderer: rendererRich(),
+              renderer: rendererRich({
+                errorRendering: 'hover',
+              }),
             }),
             transformerPzj01(),
           ],

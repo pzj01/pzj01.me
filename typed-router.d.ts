@@ -79,6 +79,7 @@ declare module 'vue-router/auto-routes' {
     '/notes/svg-stroke': RouteRecordInfo<'/notes/svg-stroke', '/notes/svg-stroke', Record<never, never>, Record<never, never>>,
     '/notes/svg-text-tag-and-property': RouteRecordInfo<'/notes/svg-text-tag-and-property', '/notes/svg-text-tag-and-property', Record<never, never>, Record<never, never>>,
     '/notes/tcp': RouteRecordInfo<'/notes/tcp', '/notes/tcp', Record<never, never>, Record<never, never>>,
+    '/notes/tsconfig': RouteRecordInfo<'/notes/tsconfig', '/notes/tsconfig', Record<never, never>, Record<never, never>>,
     '/six/': RouteRecordInfo<'/six/', '/six', Record<never, never>, Record<never, never>>,
     '/six/2024-12-23': RouteRecordInfo<'/six/2024-12-23', '/six/2024-12-23', Record<never, never>, Record<never, never>>,
     '/six/2024-12-24': RouteRecordInfo<'/six/2024-12-24', '/six/2024-12-24', Record<never, never>, Record<never, never>>,

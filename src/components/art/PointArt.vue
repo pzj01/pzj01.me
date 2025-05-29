@@ -9,7 +9,7 @@ interface Point extends _Point {
   alpha: number
 }
 
-const SIZE = Math.max(Math.random() * 1.2 * Math.PI, 1.5)
+const SIZE = 1.75
 // 扩大移动范围
 const EXPEND = 1.5
 // 平移范围

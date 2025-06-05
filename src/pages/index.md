@@ -64,9 +64,7 @@ socialLinks:
 
 # About me
 
-你好，我是 {@pzj01} ，一名即将毕业的软件专业的大学生，对于前端技术有着浓厚的兴趣，目前正在积累前端知识，希望能够在未来的工作中有所应用。
-
-> 现在我需要一份工作，如果你有兴趣，请联系我，我会尽快回复你的。
+你好，我是 {@pzj01} ，一名应届的软件专业的大学生，对于前端技术有着浓厚的兴趣，目前正在积累前端知识，希望能够在未来的工作中有所应用。
 
 # Tech Stack
 
@@ -78,9 +76,9 @@ socialLinks:
 - @pzj01/utils：https://github.com/pzj01/utils
 - @pzj01/picpress：https://github.com/pzj01/picpress
 
-# My goal
+# Current Focus
 
-- 完成和 Jack 叔叔的[六年之约](/six)。
+- 找工作
 
 # Idol
 

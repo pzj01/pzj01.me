@@ -33,6 +33,7 @@
     "auto-imports.d.ts",
     "components.d.ts",
     "shims.d.ts",
-    "transformer.ts"
+    "transformer.ts",
+    "photos/index.ts"
   ]
 }

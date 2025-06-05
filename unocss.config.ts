@@ -1,4 +1,5 @@
-import { presetAttributify, presetIcons, presetUno, presetWebFonts, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { presetAttributify, presetIcons, presetWebFonts, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { presetWind3 } from 'unocss/preset-wind3'
 import { defineConfig } from 'unocss/vite'
 
 export default defineConfig({
@@ -10,13 +11,13 @@ export default defineConfig({
     ['btn', 'flex items-center border p-2 rounded text'],
   ],
   rules: [
-    [/s-(\d+)/, ([, d]) => {
+    [/^s-(\d+)/, ([, d]) => {
       const value = `${Number(d) * 0.25}rem`
       return { width: value, height: value }
     }],
   ],
   presets: [
-    presetUno(),
+    presetWind3(),
     presetAttributify(),
     presetIcons({
       scale: 1.2,

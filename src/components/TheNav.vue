@@ -22,7 +22,8 @@ onMounted(() => {
       <HeaderLink to="/use" icon="i-ri-tools-line">Use</HeaderLink>
       <HeaderLink to="/six" icon="https://api.iconify.design/ph:number-six-bold.svg?color=%23cfcfcf">六年之约</HeaderLink>
       <HeaderLink to="/notes" icon="i-ri-sticky-note-2-line">Notes</HeaderLink>
-      <a hidden md:block lg:text-lg link href="/feed.xml" i-ri-rss-line target="_blank" />
+      <RouterLink to="/photos" i-ri-image-line lg:text-lg link />
+      <RouterLink hidden md:block lg:text-lg link to="/feed.xml" i-ri-rss-line target="_blank" />
       <!-- eslint-disable-next-line vue/valid-attribute-name -->
       <button v-show="buffered.length" lg:(block text-lg) :class="playing ? 'i-ri-pause-circle-line' : 'i-ri-play-circle-line'" @click="playing = !playing" />
       <a lg:text-lg link href="https://github.com/pzj01" i-ri-github-fill target="_blank" />

@@ -18,6 +18,7 @@ audio.src = `/audio/${frontmatter?.music}` || ''
 const isPost = computed(() => !!frontmatter?.date)
 
 const router = useRouter()
+const isPhotos = computed(() => frontmatter?.layout === 'photos')
 
 useHead({
   title: frontmatter?.title,
@@ -36,7 +37,7 @@ if (window) {
 
 onMounted(() => {
   const btns = document.querySelectorAll('.copy-button')
-  btns.forEach(btn => {
+  btns.forEach((btn) => {
     useEventListener(btn, 'click', () => {
       navigator.clipboard.writeText(btn.getAttribute('data-clipboard-text')!)
     })
@@ -49,8 +50,8 @@ onMounted(() => {
     <component :is="ArtComponent" />
   </ClientOnly>
   <div p-4 font-sans>
-    <article class="mx-auto md:w-3/4 lg:w-1/2">
-      <h1 font-display :class="!isPost && 'mb-12 lg:mb-16'" text="3xl lg:4xl pretty" font-bold>
+    <article :class="!isPhotos && 'mx-auto md:w-3/4 lg:w-1/2'">
+      <h1 v-if="!isPhotos" font-display :class="!isPost && 'mb-12 lg:mb-16'" text="3xl lg:4xl pretty" font-bold>
         {{ frontmatter?.title }}
       </h1>
       <DateFormat v-if="isPost" my-2 overflow-hidden block :date="frontmatter!.date!" />

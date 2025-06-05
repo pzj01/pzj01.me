@@ -75,6 +75,8 @@ socialLinks:
 # Projects
 
 - 阴阳师访问页：https://avenue-opposites-yys.netlify.app
+- @pzj01/utils：https://github.com/pzj01/utils
+- @pzj01/picpress：https://github.com/pzj01/picpress
 
 # My goal
 

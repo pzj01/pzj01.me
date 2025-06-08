@@ -74,9 +74,11 @@ export default function transformerPzj01(): ShikiTransformer {
         .replace('background-color', '--shiki-bg')
         .replace('color', '--shiki')
     },
+
     span(hast) {
-      hast.properties.style = (hast.properties.style as string)
-        .replace('color', '--shiki')
+      hast.properties.style = typeof hast.properties.style === 'string'
+        ? hast.properties.style.replace('color', '--shiki')
+        : hast.properties.style
     },
   }
 }

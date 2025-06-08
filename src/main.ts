@@ -1,8 +1,10 @@
 import NProgress from 'nprogress'
+import { createPinia } from 'pinia'
 import { ViteSSG } from 'vite-ssg'
 import { setupRouterScroller } from 'vue-router-better-scroller'
 import { routes } from 'vue-router/auto-routes'
 import App from './App.vue'
+import ToastService from './plugins/toast'
 // 进度条
 import 'nprogress/nprogress.css'
 
@@ -38,5 +40,8 @@ export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) =>
     })
 
     provideAudio(app)
+    provideSession(app)
+    app.use(createPinia())
+    app.use(ToastService)
   }
 })

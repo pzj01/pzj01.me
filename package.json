@@ -13,12 +13,14 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.10",
     "@types/hast": "^3.0.4",
     "@vueuse/core": "^13.0.0",
     "gsap": "^3.12.7",
     "leaflet": "^1.9.4",
     "nprogress": "^0.2.0",
     "p5i": "^0.6.0",
+    "pinia": "^3.0.3",
     "spark-md5": "^3.0.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",

@@ -9,6 +9,7 @@ export default defineConfig({
     ['svg', 'mx-auto w-1/2 border border-zinc'],
     ['flex-center', 'flex justify-center items-center'],
     ['btn', 'flex items-center border p-2 rounded text'],
+    ['github-btn', 'transition-colors flex-center rounded p-2 bg-green-500:60 text-white hover:bg-green-500:70'],
   ],
   rules: [
     [/^s-(\d+)/, ([, d]) => {

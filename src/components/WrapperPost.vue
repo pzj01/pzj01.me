@@ -57,7 +57,22 @@ onMounted(() => {
       <DateFormat v-if="isPost" my-2 overflow-hidden block :date="frontmatter!.date!" />
       <slot />
       <div v-if="isPost" transition-colors mt-4 pl-2>
-        <span text="neutral-500 hover:neutral-600 dark:hover:text-neutral-400" font-input font-mono cursor-default @click="back">~ cd ../</span>
+        <span hover:underline text="neutral-500 dark:text-neutral-400" font-input cursor-pointer @click="back">~ cd ../</span>
+      </div>
+      <div v-if="isPost" mt-48>
+        <h2 mb-4 text-lg font-bold>
+          Comment / 留言区
+        </h2>
+        <Suspense>
+          <div space-y-8>
+            <CommentForm />
+            <Comments />
+          </div>
+
+          <template #fallback>
+            <div>加载中...</div>
+          </template>
+        </Suspense>
       </div>
     </article>
     <BackToTop />

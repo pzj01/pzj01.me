@@ -6,7 +6,7 @@ date: 2024-10-07T21:36:00
 tags: [Vue3]
 ---
 
-> 使用的源码版本为的是 @vue/reactivity@3.5.0-rc.1
+> 使用的源码版本为的是 @vue/reactivity@3.5.16
 
 src目录下文件大概功能说明：
 - `reactive.ts`（[第一部分](/blog/vue3-reactivity-part1)）：这是 Vue 3 响应式系统的**核心文件**。它定义了创建响应式对象的主要函数，如 `reactive`、`readonly` 等，以及一些用于检查对象是否是响应式的工具函数。

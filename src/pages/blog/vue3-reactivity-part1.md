@@ -10,14 +10,14 @@ tags: [Vue3]
 
 # 什么是响应式？
 
-这个借鉴了[观察者模式](/blog/design-pattern-observer)的思想，我们可以把数据看作一个被观察者，视图看作观察者。当数据发生变化时，我们可以通过观察者的方法更新视图。总结一句话：数据发生改变时，我们可以做一些事情，比如更新视图，发送网络请求等。有求必应，这就是响应式。
+这个借鉴了[观察者模式](/blog/design-pattern-observer)的思想，我们可以把数据看作一个依赖，副作用函数（渲染函数或者其他的函数）看作一个订阅者。当数据发生变化时，通知订阅者。
 
 ## 响应式对象是如何被创建的？
 
 > [!IMPORTANT]
 > 响应式对象的本质是一个代理对象。
 
-我们一般都是使用reactive创建的，使用它创建的响应式对象都是深层次的。
+我们一般都是使用 <Function>reactive()</Function> 创建的，使用它创建的响应式对象都是深层次的。
 
 ```ts
 import { reactive } from '@vue/reactivity'
@@ -65,8 +65,6 @@ export function reactive<T extends object>(target: T) {
 }
 ```
 
-> 关于依赖收集的讲解请看下一篇。
-
 考虑到用户可能把一个已经代理的对象传入，我们需要做一个缓存，避免重复代理，这里可以使用WeakMap来实现。
 
 > [!NOTE]
@@ -98,7 +96,7 @@ export function reactive<T extends object>(target: T) {
 }
 ```
 
-这样就实现一个简单的reactive函数了。现在可以尝试实现其他的reactive变体了，比如：shallowReactive、readonly、shallowReadonly。
+这样就实现一个简单的 reactive 函数了。现在可以尝试实现其他的reactive变体了，比如：shallowReactive、readonly、shallowReadonly。
 
 <details>
 <summary>
@@ -117,8 +115,8 @@ export function reactive(target: object) {
   return createReactiveObject(
     target,
     false, // 是否只读
-    mutableHandlers, // 基本处理器
-    mutableCollectionHandlers, // 集合处理器
+    mutableHandlers, // 可变基本处理器
+    mutableCollectionHandlers, // 可变集合处理器
     reactiveMap,
   )
 }
@@ -273,11 +271,13 @@ function createReactiveObject(
     return existingProxy
   }
 
-
   const targetType = getTargetType(target)
+
+  // 如果目标对象无效，返回目标对象
   if (targetType === TargetType.INVALID) {
     return target
   }
+
   const proxy = new Proxy(
     target,
     targetType === TargetType.COLLECTION ? collectionHandlers : baseHandlers,
@@ -339,13 +339,13 @@ export interface Target {
 }
 ```
 
-> 源码中`ReactiveFlags`的定义在`constant.ts`中。
+> 源码中 `ReactiveFlags` 的定义在 <Major bg>constants.ts</Major> 中。
 
 ## isReadonly 实现
 
 通过响应式标记，我们就可以判断对象是否为只读的了，只要传入的值存在并且它的响应式标记为只读那么它就是一个readonly对象。
 
-> 使用!!是强行将值转换为布尔值，因为表达式的结果可能不是一个布尔值。
+> 使用!!是强行将值转换为布尔值，因为表达式的结果可能不是一个布尔值，因为短路会返回表达式的最终值。
 
 ```ts
 export function isReadonly(value: unknown): boolean {
@@ -393,7 +393,7 @@ const reactiveObj2 = reactive (obj)
 console.log(reactiveObj1 === reactiveObj2) // true
 ```
 
-例2：尝试将reactive转换为readonly。
+例2：尝试将 reactive 转换为 readonly 。
 
 ```ts
 const reactiveObj = reactive({ foo: 1 })
@@ -403,7 +403,7 @@ const readonlyObj = readonly(reactiveObj)
 console.log(reactiveObj === readonlyObj) // false
 ```
 
-例3：将只读对象传入readonly。
+例3：将只读对象传入 readonly。
 
 ```ts
 const reactiveObj = reactive({ foo: 1 })
@@ -414,8 +414,8 @@ const readonlyObj2 = readonly(readonlyObj)
 console.log(reactiveObj === readonlyObj2) // true
 ```
 
-这样我们需要使用`ReactiveFlags`来判断是否是响应式对象，并且还需要一个标记表示当前创建的是否为只读对象。
-修改createReactiveObject的代码如下：
+这样我们需要使用 `ReactiveFlags` 来判断是否是响应式对象，并且还需要一个标记表示当前创建的是否为只读对象。
+修改 <Function>createReactiveObject()</Function> 的代码如下：
 
 ```ts
 export function createReactiveObject(
@@ -428,7 +428,7 @@ export function createReactiveObject(
 
   // 对于为什么能读取到`ReactiveFlags`，将会在handlers的部分中揭晓
   // 如果是一个响应式对象（不管是深层还是浅层），直接返回它
-  // 例外情况：在只读的情况下，如果目标对象已经是一个响应式对象（不管是深层还是浅层），则直接返回目标对象，考虑例3
+  // 例外情况： 调用 readlony() 时传入的是一个响应式对象，则创建一个只读代理，否则返回目标对象
   if (target[ReactiveFlags.RAW] && !(isReadonly && target[ReactiveFlags.IS_REACTIVE])) {
     return target
   }
@@ -572,7 +572,7 @@ isReactive(readonlyObj2) // 结果为false，预计为true，但是这具备响�
 
 // case 4
 const readonlyObj3 = readonly(readonlyObj2)
-isReactive(readonlyObj3) // 结果为false，预计为true，这个应该也具备响应式，因为它的代理上层包含了readonlyObj2，当readonlyObj2改变时，它也会改变，而readonlyObj2的值又受到reactiveObj的影响。
+isReactive(readonlyObj3) // 结果为false，预计为true，这个应该也具备响应式，因为调用readonly()传入一个readonly对象，会之间返回它，这样就和case3是一样的
 ```
 
 这样来看只要代理链上层中只要有一个响应式对象，那么它就是响应式对象，那么如何解决这个问题呢？
@@ -598,7 +598,7 @@ isReactive(readonlyObj3) // 结果为false，预计为true，这个应该也具�
  * isReactive(shallowRef({}).value)    // => false
  * isReactive(shallowReactive({}))     // => true
  * ```
-*/
+ */
 export function isReactive(value: unknown): boolean {
   // 如果是只读对象就获取它的原始对象，递归判断原始对象是否为响应式对象，只要代理链中有一个响应式对象，那么它就是响应式对象
   if (isReadonly(value)) {
@@ -689,7 +689,7 @@ console.log(reactiveObj === markRawObj) // true
 export function markRaw<T extends object>(value: T): T {
   // 如果对象可以扩展，则添加ReactiveFlags.SKIP标记，跳过响应式转换。
   // Reflect.defineProperty和Object.defineProperty的区别就是它返回是布尔值
-  if(Object.isExtensible(value)) {
+  if (Object.isExtensible(value)) {
     Reflect.defineProperty(value, ReactiveFlags.SKIP, {
       value: true,
       writable: false,
@@ -720,3 +720,27 @@ export function markRaw<T extends object>(value: T): Raw<T> {
 ```
 
 </details>
+
+## toReactive 实现
+
+这个函数将一个值转换为响应式对象，如果不是对象，那么直接返回它。
+
+```ts
+export function toReactive<T>(value: T): T {
+  return isObject(value) ? reactive(value) : value
+}
+```
+
+> `toReactive()`源码同上。
+
+## toReadonly 实现
+
+这个函数将一个值转换为只读对象，如果不是对象，那么直接返回它。
+
+```ts
+export function toReadonly<T>(value: T): T {
+  return isObject(value) ? readonly(value) : value
+}
+```
+
+> `toReadonly()`源码同上。

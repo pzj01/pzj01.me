@@ -8,7 +8,7 @@ export async function provideSession(app: App) {
   const { data: { session }, error } = await supabase.auth.getSession()
 
   if (error) {
-    throw error
+    throw new Error('Failed to fetch session')
   }
 
   if (!session) {

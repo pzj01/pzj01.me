@@ -1,4 +1,5 @@
 import type { MessageType, Position } from '../types'
+import { isClient } from '@vueuse/core'
 import Toast from '../components/Toast.vue'
 
 interface ToastOptions {
@@ -19,7 +20,7 @@ const positionClassMap: Record<Position, string> = {
   'bottom-right': 'fixed bottom-4 right-4',
 }
 
-Object.entries(positionClassMap).forEach(([key, value]) => {
+isClient && Object.entries(positionClassMap).forEach(([key, value]) => {
   const fragment = document.createDocumentFragment()
   const container = document.createElement('div')
   container.id = `toast-container-${key}`

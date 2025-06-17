@@ -5,7 +5,7 @@ const { bg = false } = defineProps<{
 </script>
 
 <template>
-  <span :class="bg && 'bg-yellow:20'" text-yellow-600 dark:text-yellow box-decoration-clone px-1 rounded font="mono">
+  <span :class="bg && 'bg-lime:20'" text-lime-600 dark:text-lime box-decoration-clone px-1 rounded font="mono">
     <slot />
   </span>
 </template>

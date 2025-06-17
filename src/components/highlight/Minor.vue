@@ -9,7 +9,3 @@ const { bg = false } = defineProps<{
     <slot />
   </span>
 </template>
-
-<style>
-
-</style>

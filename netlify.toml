@@ -7,4 +7,4 @@ publish = "dist"
 [build.environment]
 NPM_FLAGS = "--version"
 NODE_VERSION = "20.17.0" # Node.js 版本
-PNPM_VERSION = "9.5.0" # pnpm 版本
+PNPM_VERSION = "10.6.5" # pnpm 版本

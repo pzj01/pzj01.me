@@ -32,6 +32,7 @@ declare module 'vue' {
     FeMorphologyDemo: typeof import('./src/components/demo/FeMorphologyDemo.vue')['default']
     FeTurbulenceDemo: typeof import('./src/components/demo/FeTurbulenceDemo.vue')['default']
     FileUploadDemo: typeof import('./src/components/demo/FileUploadDemo.vue')['default']
+    Function: typeof import('./src/components/highlight/Function.vue')['default']
     GeolocationDemo: typeof import('./src/components/demo/GeolocationDemo.vue')['default']
     HeaderLink: typeof import('./src/components/HeaderLink.vue')['default']
     IntersectionObserver: typeof import('./src/components/demo/IntersectionObserver.vue')['default']

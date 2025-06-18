@@ -43,6 +43,7 @@ declare module 'vue-router/auto-routes' {
     '/blog/pnpm-version-confusion': RouteRecordInfo<'/blog/pnpm-version-confusion', '/blog/pnpm-version-confusion', Record<never, never>, Record<never, never>>,
     '/blog/vue3-reactivity': RouteRecordInfo<'/blog/vue3-reactivity', '/blog/vue3-reactivity', Record<never, never>, Record<never, never>>,
     '/blog/vue3-reactivity-part1': RouteRecordInfo<'/blog/vue3-reactivity-part1', '/blog/vue3-reactivity-part1', Record<never, never>, Record<never, never>>,
+    '/blog/vue3-reactivity-part2': RouteRecordInfo<'/blog/vue3-reactivity-part2', '/blog/vue3-reactivity-part2', Record<never, never>, Record<never, never>>,
     '/blog/web-api-clipboard': RouteRecordInfo<'/blog/web-api-clipboard', '/blog/web-api-clipboard', Record<never, never>, Record<never, never>>,
     '/blog/web-api-draggable': RouteRecordInfo<'/blog/web-api-draggable', '/blog/web-api-draggable', Record<never, never>, Record<never, never>>,
     '/blog/web-api-file': RouteRecordInfo<'/blog/web-api-file', '/blog/web-api-file', Record<never, never>, Record<never, never>>,

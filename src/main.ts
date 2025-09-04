@@ -40,7 +40,6 @@ export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) =>
     })
 
     provideAudio(app)
-    provideSession(app)
     app.use(createPinia())
     app.use(ToastService)
   }

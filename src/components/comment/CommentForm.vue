@@ -1,13 +1,14 @@
 <script lang="ts" setup>
 import type { User } from '@supabase/supabase-js'
+import { storeToRefs } from 'pinia'
 import { supabase } from '../../utils/supabase'
 
-const session = useSession()
 const route = useRoute()
 const content = ref('')
 const commentStore = useCommentStore()
+const { session } = storeToRefs(commentStore)
 
-async function sendComment(user: User) {  
+async function sendComment(user: User) {
   await commentStore.addComment({
     post_slug: route.path.split('/').at(-1)!,
     user_id: user.user_metadata.provider_id,
@@ -39,7 +40,7 @@ function github() {
         <label for="comment">
           <img :src="session.user.user_metadata.avatar_url" object-cover s-12 rounded-full>
         </label>
-        <textarea v-model="content" id="comment" flex-1 text-white resize-none outline-none bg-gray-700 dark:bg-gray-800 rows="4" placeholder="请输入评论" />
+        <textarea id="comment" v-model="content" flex-1 text-white resize-none outline-none bg-gray-700 dark:bg-gray-800 rows="4" placeholder="请输入评论" />
       </div>
       <button ml-auto type="submit" github-btn rounded-md>
         发送留言

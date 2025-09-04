@@ -6,9 +6,8 @@ import { storeToRefs } from 'pinia'
 import { useCommentStore } from '../../composables/comment'
 
 const commentStore = useCommentStore()
-const { comments } = storeToRefs(commentStore)
+const { comments, session } = storeToRefs(commentStore)
 const { updateComment, deleteComment } = commentStore
-const { user } = useSession()
 const [isEditing, toggle] = useToggle()
 const state = reactive({
   currentCommentId: '',
@@ -66,7 +65,7 @@ async function submitHandler(comment: Comment) {
         <p v-else text-white>
           {{ comment.content }}
         </p>
-        <div v-if="user.user_metadata.provider_id === comment.user_id" mt-2 self-end space-x-2>
+        <div v-if="session?.user.user_metadata.provider_id === comment.user_id" mt-2 self-end space-x-2>
           <button i-ri-edit-2-line text="sm gray-400 hover:blue" @click="toggleEditMode(comment.id, comment.content)" />
           <button i-ri-delete-bin-6-line text="sm gray-400 hover:red" @click="deleteComment(comment.id)" />
         </div>

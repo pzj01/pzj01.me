@@ -1,16 +1,27 @@
+import type { Session } from '@supabase/supabase-js'
 import type { Comment } from '../types'
 import { compareAsc } from 'date-fns'
 import { defineStore } from 'pinia'
 import { supabase } from '../utils/supabase'
 
 export const useCommentStore = defineStore('comment', () => {
-  const session = useSession()
+  const session = ref<Session | null>(null)
   const comments = ref<Comment[]>([])
-  const userComments = computed(() => comments.value.filter(comment => comment.user_id === session.user.user_metadata.provider_id))
+  const isLogin = computed(() => Boolean(session.value))
   const route = useRoute()
   const toast = useToast()
 
-  watchEffect(() => fetchComments(route.path.split('/').at(-1)!))
+  watchEffect(async () => {
+    const { data, error } = await supabase.auth.getSession()
+
+    if (error) {
+      console.error(error)
+      return
+    }
+
+    session.value = data.session
+    fetchComments(route.path.split('/').at(-1)!)
+  })
 
   async function fetchComments(slug: string) {
     const { data, error } = await supabase.from('comments').select('*').eq('post_slug', slug)
@@ -82,8 +93,9 @@ export const useCommentStore = defineStore('comment', () => {
   }
 
   return {
+    session,
     comments,
-    userComments,
+    isLogin,
     addComment,
     deleteComment,
     updateComment,
